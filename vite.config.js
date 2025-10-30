@@ -16,10 +16,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, "src/index.html"),
-        flightList: path.resolve(__dirname, "src/Flight-List.html"),
-        flightInfo: path.resolve(__dirname, "src/Flight-Info.html"),
-        flightPayment: path.resolve(__dirname, "src/Flight-Payment.html"),
-        flight: path.resolve(__dirname, "src/flight.html"),
+        // flightList: path.resolve(__dirname, "src/Flight-List.html"),
+        // flightInfo: path.resolve(__dirname, "src/Flight-Info.html"),
+        // flightPayment: path.resolve(__dirname, "src/Flight-Payment.html"),
+        // flight: path.resolve(__dirname, "src/flight.html"),
         // ...
       },
     },

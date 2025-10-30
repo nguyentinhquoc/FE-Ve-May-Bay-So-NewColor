@@ -65,21 +65,21 @@
 
   </section>
   <section class="container mx-auto mt-8">
-    <div class="header-section flex justify-between ">
+    <div class="header-section flex justify-between md:flex-wrap gap-4">
       <div>
         <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
         <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
       </div>
       <div class="font-bold">
-        <a class="text-accent p-3">Phú Quốc</a>
-        <a class="p-3" href="">Đà Nắng</a>
-        <a class="p-3">Quy Nhớn</a>
-        <a class="p-3">...</a>
+        <a class="text-accent text-base md:text-xs p-3">Phú Quốc</a>
+        <a class="text-base p-3 md:text-xs" href="">Đà Nắng</a>
+        <a class="text-base p-3 md:text-xs">Quy Nhớn</a>
+        <a class="text-base p-3 md:text-xs">...</a>
       </div>
     </div>
     <div class="content mt-10">
-      <div class="flex gap-10">
-        <div class="w-2/5">
+      <div class="flex gap-10 lg:flex-wrap">
+        <div class="w-2/5 lg:w-full">
           <ul class="flex flex-col">
             <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
               <div>
@@ -129,7 +129,7 @@
           </ul>
           <p class="ml-auto w-fit text-base font-bold"><a href=""> Tìm thêm chuyến bay >></a></p>
         </div>
-        <div class="w-3/5 flex gap-6 justify-between">
+        <div class="w-3/5 flex gap-6 justify-between lg:w-full">
           <%- include("components/hotel-card.ejs") %>
         </div>
       </div>
@@ -138,8 +138,8 @@
   <section class="container mx-auto mt-10">
     <div class="header-section flex justify-between ">
       <div>
-        <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
-        <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
+        <p class=" text-2xl font-bold">Điểm đến hấp dẫn</p>
+        <p class=" text-base">Khám phá trọn vẹn một hành trình</p>
       </div>
       <div class="font-bold">
         <a class="text-accent p-3">Phú Quốc</a>

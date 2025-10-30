@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@config "./../tailwind.config.js";
 /* Font setup */
 body {
   font-family: "Manrope", sans-serif;
@@ -11,15 +11,19 @@ body {
     width: 100%;
     @media (width >= 40rem) {
       max-width: 40rem;
+      background: green;
     }
     @media (width >= 48rem) {
       max-width: 48rem;
+      background: blue;
     }
     @media (width >= 64rem) {
       max-width: 64rem;
+      background: rgb(28, 174, 193);
     }
     @media (width >= 80rem) {
       max-width: 80rem;
+      background: rgb(26, 199, 13);
     }
   }
 /* Theme configuration */

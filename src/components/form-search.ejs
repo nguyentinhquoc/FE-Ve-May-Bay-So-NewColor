@@ -1,23 +1,25 @@
 <section class="container mx-auto mt-7.5">
-  <div class="bg-primary text-white rounded-2xl p-4 md:p-6 shadow-lg">
+  <div class="bg-primary text-white rounded-2xl p-4  shadow-lg">
     <form class="w-full">
-      <div class="flex flex-wrap items-center gap-5">
-        <label class="inline-flex items-center gap-2 cursor-pointer">
-          <input type="radio" name="trip" class="size-4" checked>
-          <span class="text-sm md:text-base">Một chiều</span>
-        </label>
-        <label class="inline-flex items-center gap-2 cursor-pointer">
-          <input type="radio" name="trip" class="size-4">
-          <span class="text-sm md:text-base">Khứ hồi</span>
-        </label>
+      <div class="flex flex-wrap items-center gap-5 xl:justify-between">
+        <div>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="trip" class="size-4" checked>
+            <span class="text-sm">Một chiều</span>
+          </label>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="trip" class="size-4">
+            <span class="text-sm">Khứ hồi</span>
+          </label>
+        </div>
         <button type="button" class="flex gap-2">
           <img src="./search/member.svg" alt="Icon member">
           <span>Số lượng hành khách</span>
           <img src="./search/drop-dow.svg" alt="Icon member">
         </button>
       </div>
-      <div class="flex justify-between gap-3 my-2">
-        <div class="bg-white flex-1 rounded-md p-3 flex justify-between items-center">
+      <div class=" justify-between gap-3 my-2 grid grid-cols-5 xl:grid-cols-2 sm:grid-cols-1">
+        <div class="bg-white rounded-md p-3 flex justify-between items-center">
           <div>
             <div class="flex gap-2">
               <img src="./search/plane-start.svg" alt="icon plane">
@@ -29,7 +31,7 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
           </div>
         </div>
-       <div class="bg-white flex-1 rounded-md p-3 flex justify-between items-center">
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
           <div>
             <div class="flex gap-2">
               <img src="./search/plane-start.svg" alt="icon plane">
@@ -41,7 +43,7 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
           </div>
         </div>
-       <div class="bg-white flex-1 rounded-md p-3 flex justify-between items-center">
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane">
@@ -53,7 +55,7 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
           </div>
         </div>
-       <div class="bg-white flex-1 rounded-md p-3 flex justify-between items-center">
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane">
@@ -65,13 +67,9 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
           </div>
         </div>
-      
-        <div class="bg-accent flex-1 rounded-md">
+        <div class="bg-accent  rounded-md xl:col-span-2 sm:col-span-1 xl:py-6">
           <button class="w-full h-full uppercase font-bold text-[22px]">Tìm kiếm</button>
         </div>
       </div>
-
     </form>
-
-
 </section>

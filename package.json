@@ -1,6 +1,7 @@
 {
     "scripts": {
         "dev": "vite",
+        "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
         "build": "vite build",
         "deploy": "vite build && gh-pages -d dist"
     },

@@ -1,16 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <%- include("components/flight-card/index.ejs") %>
-    <h1 class="bg- text-white p-2 rounded">
-        Hello world!
-    </h1>
-    <script type="module" src="main.js"></script>
+
+<body class="text-primary">
+  <%- include("layout/header.ejs") %>
+  <%- include("components/form-search.ejs") %>
+  <section class="container overflow-hidden mx-auto mt-12 h-100">
+    <div class="relative">
+      <div id="slider" class="relative">
+        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:block;">
+          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&q=80&w=2070" alt="">
+          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+          <div class="absolute left-11 bottom-14">
+            <p class=" text-4xl font-bold">Khám phá đảo ngọc</p>
+            <p class=" font-bold text-[40px]">Phú Quốc</p>
+            <p class=" text-2xl">Chỉ từ</p>
+            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+          </div>
+        </div>
+        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
+          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="">
+          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+          <div class="absolute left-11 bottom-14">
+            <p class=" text-4xl font-bold">Khám phá Hà Nội</p>
+            <p class=" font-bold text-[40px]">Phú Quốc</p>
+            <p class=" text-2xl">Chỉ từ</p>
+            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+          </div>
+        </div>
+        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
+          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="">
+          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+          <div class="absolute left-11 bottom-14">
+            <p class=" text-4xl font-bold ">Khám phá đảo ngọc</p>
+            <p class=" font-bold text-[40px]">Phú Quốc</p>
+            <p class=" text-2xl">Chỉ từ</p>
+            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+          </div>
+        </div>
+      </div>
+      <!-- Slide controls -->
+      <div class="absolute right-10 bottom-8 flex gap-2">
+        <button id="prevSlide" class="cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-20 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
+          <svg width="24" height="24" fill="none">
+            <path d="M15.5 19 9.5 12 15.5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+        </button>
+        <button id="nextSlide" class=" cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-50 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
+          <svg width="24" height="24" fill="none">
+            <path d="M8.5 5 14.5 12 8.5 19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+        </button>
+        <div>
+        </div>
+
+  </section>
+  <section class="container mx-auto mt-8">
+    <div class="header-section flex justify-between ">
+      <div>
+        <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
+        <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
+      </div>
+      <div class="font-bold">
+        <a class="text-accent p-3">Phú Quốc</a>
+        <a class="p-3" href="">Đà Nắng</a>
+        <a class="p-3">Quy Nhớn</a>
+        <a class="p-3">...</a>
+      </div>
+    </div>
+    <div class="content mt-10">
+      <div class="flex gap-10">
+        <div class="w-2/5">
+          <ul class="flex flex-col">
+            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+              <div>
+                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+              </div>
+              <div>
+                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+              </div>
+            </li>
+            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+              <div>
+                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+              </div>
+              <div>
+                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+              </div>
+            </li>
+            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+              <div>
+                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+              </div>
+              <div>
+                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+              </div>
+            </li>
+            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+              <div>
+                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+              </div>
+              <div>
+                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+              </div>
+            </li>
+            <li class="py-3.5  flex justify-between">
+              <div>
+                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+              </div>
+              <div>
+                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+              </div>
+            </li>
+          </ul>
+          <p class="ml-auto w-fit text-base font-bold"><a href=""> Tìm thêm chuyến bay >></a></p>
+        </div>
+        <div class="w-3/5 flex gap-6 justify-between">
+          <%- include("components/hotel-card.ejs") %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mx-auto mt-10">
+    <div class="header-section flex justify-between ">
+      <div>
+        <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
+        <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
+      </div>
+      <div class="font-bold">
+        <a class="text-accent p-3">Phú Quốc</a>
+        <a class="p-3" href="">Đà Nắng</a>
+        <a class="p-3">Quy Nhớn</a>
+        <a class="p-3">...</a>
+      </div>
+    </div>
+    <div class="content mt-10">
+      <div class="grid grid-cols-4 gap-6.5">
+        <%- include("components/flight-card.ejs") %>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto mt-10">
+    <div class="header-section">
+      <p class="text-2xl font-bold">Thông tin hữu ích cho du khách</p>
+      <p class="text-base">Bạn có thể tìm hiểu thủ tục bay, điều kiện vé ở đây</p>
+    </div>
+    <div class="content mt-10">
+      <div class="grid grid-cols-3 gap-6">
+        <div class="p-4 border rounded-xl border-[#D3D9DC]">
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="p-4 border rounded-xl border-[#D3D9DC]">
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 py-4.5">
+            <div>
+              <img src="./question/question1.svg" alt="">
+            </div>
+            <div>
+              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="py-28 px-14 border rounded-xl border-[#D3D9DC]">
+            <div class="flex flex-col justify-between h-full">
+              <div>
+                <p class="text-2xl font-bold">Câu hỏi chưa phù hợp?</p>
+              </div>
+              <div class="text-center">
+                <a href="" class=" inline-block font-bold text-sm border-2 border-primary p-2.5 rounded-2xl mx-auto w-fit">Tôi cần giải đáp</a>
+              </div>
+              <div>
+                <p class="text-sm">Chúng tôi sẽ cố gắng phản hồi sớm. Ngoài ra bạn có thể liên hệ tổng đài 09.19005320</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto mt-10">
+    <div class="header-section flex justify-between ">
+      <div>
+        <p class=" text-2xl font-bold">Tin tức</p>
+        <p class=" text-base">Nắm bắt kịp thời các khám phá mới và thông tin khuyến mại</p>
+      </div>
+      <div class="font-bold">
+        <a class="text-accent p-3">Khám phá</a>
+        <a class="p-3" href="">Khuyến mại</a>
+        <a class="p-3">Tin tức</a>
+        <a class="p-3">...</a>
+      </div>
+    </div>
+    <div class="content mt-10">
+      <div class="grid grid-cols-3 gap-5">
+        <%- include("components/news-card.ejs") %>
+      </div>
+      <div class="mt-2">
+        <a href="" class="text-base font-bold ">Xem thêm >></a>
+      </div>
+    </div>
+  </section>
+  <!-- JS SLIDER -->
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('#slider .slide');
+      let current = 0;
+
+      function showSlide(idx) {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === idx ? 'block' : 'none';
+        });
+      }
+      document.getElementById('prevSlide').addEventListener('click', function() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      });
+      document.getElementById('nextSlide').addEventListener('click', function() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      });
+
+      let autoSlide = setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 3000);
+      // Pause on mouse enter
+      document.getElementById('slider').addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+      });
+      // Resume on mouse leave
+      document.getElementById('slider').addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => {
+          current = (current + 1) % slides.length;
+          showSlide(current);
+        }, 4000);
+      });
+      // Initial display
+      showSlide(current);
+    })();
+  </script>
+  <%- include("layout/footer.ejs") %>
 </body>
+
 </html>

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Font setup */
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+ .container {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+  }
+/* Theme configuration */
+@theme {
+  /* 🎨 Màu sắc chủ đạo */
+  --color-primary: #00296B;
+  --color-highlight: #EBA00A;
+  --color-accent: #FF3C13;
+  --color-text-gray: #878C93;
+  --color-bg-gray: #E9EBEE;
+  --color-bg-info: #EEFDFF;
+}

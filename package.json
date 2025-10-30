@@ -5,8 +5,10 @@
         "deploy": "vite build && gh-pages -d dist"
     },
     "dependencies": {
+        "@tailwindcss/cli": "^4.1.16",
         "gh-pages": "^6.3.0",
         "sass": "^1.88.0",
+        "tailwindcss": "^4.1.16",
         "vite": "^6.3.5",
         "vite-plugin-ejs": "^1.7.0"
     }

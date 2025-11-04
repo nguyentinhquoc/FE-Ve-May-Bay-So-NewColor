@@ -12,5 +12,9 @@
         "tailwindcss": "^4.1.16",
         "vite": "^6.3.5",
         "vite-plugin-ejs": "^1.7.0"
+    },
+    "devDependencies": {
+        "vite-plugin-html-mpa": "^1.0.4",
+        "vite-plugin-mpa": "^1.2.0"
     }
 }

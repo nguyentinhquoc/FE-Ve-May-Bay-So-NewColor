@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-
 <body class="text-primary">
   <%- include("layout/header.ejs") %>
   <%- include("components/form-search.ejs") %>
@@ -32,7 +30,7 @@
           <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
           <div class="absolute left-11 bottom-14">
             <p class=" text-4xl font-bold">Khám phá Hà Nội</p>
-            <p class=" font-bold text-[40px]">Phú Quốc</p>
+            <p class=" font-bold text-[40px]">Phú Quốc</p> 
             <p class=" text-2xl">Chỉ từ</p>
             <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
           </div>
@@ -62,24 +60,23 @@
         </button>
         <div>
         </div>
-
   </section>
   <section class="container mx-auto mt-8">
-    <div class="header-section flex justify-between md:flex-wrap gap-4">
+    <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
       <div>
         <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
         <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
       </div>
       <div class="font-bold">
-        <a class="text-accent text-base md:text-xs p-3">Phú Quốc</a>
-        <a class="text-base p-3 md:text-xs" href="">Đà Nắng</a>
-        <a class="text-base p-3 md:text-xs">Quy Nhớn</a>
-        <a class="text-base p-3 md:text-xs">...</a>
+        <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
+        <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
+        <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
+        <a class="text-base p-3 max-md:text-xs">...</a>
       </div>
     </div>
     <div class="content mt-10">
-      <div class="flex gap-10 lg:flex-wrap">
-        <div class="w-2/5 lg:w-full">
+      <div class="flex gap-10 max-lg:flex-wrap">
+        <div class="w-2/5 max-lg:w-full">
           <ul class="flex flex-col">
             <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
               <div>
@@ -129,39 +126,38 @@
           </ul>
           <p class="ml-auto w-fit text-base font-bold"><a href=""> Tìm thêm chuyến bay >></a></p>
         </div>
-        <div class="w-3/5 flex gap-6 justify-between lg:w-full">
+        <div class="w-3/5 flex gap-6 justify-between max-lg:w-full max-sm:flex-wrap">
           <%- include("components/hotel-card.ejs") %>
         </div>
       </div>
     </div>
   </section>
   <section class="container mx-auto mt-10">
-    <div class="header-section flex justify-between ">
+    <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
       <div>
         <p class=" text-2xl font-bold">Điểm đến hấp dẫn</p>
         <p class=" text-base">Khám phá trọn vẹn một hành trình</p>
       </div>
-      <div class="font-bold">
-        <a class="text-accent p-3">Phú Quốc</a>
-        <a class="p-3" href="">Đà Nắng</a>
-        <a class="p-3">Quy Nhớn</a>
-        <a class="p-3">...</a>
+    <div class="font-bold">
+        <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
+        <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
+        <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
+        <a class="text-base p-3 max-md:text-xs">...</a>
       </div>
     </div>
     <div class="content mt-10">
-      <div class="grid grid-cols-4 gap-6.5">
+      <div class="grid grid-cols-4 gap-6.5 max-sm:grid-cols-1 max-lg:grid-cols-2 ">
         <%- include("components/flight-card.ejs") %>
       </div>
     </div>
   </section>
-
   <section class="container mx-auto mt-10">
     <div class="header-section">
       <p class="text-2xl font-bold">Thông tin hữu ích cho du khách</p>
       <p class="text-base">Bạn có thể tìm hiểu thủ tục bay, điều kiện vé ở đây</p>
     </div>
     <div class="content mt-10">
-      <div class="grid grid-cols-3 gap-6">
+      <div class="grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1 gap-6">
         <div class="p-4 border rounded-xl border-[#D3D9DC]">
           <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
             <div>
@@ -204,7 +200,6 @@
             </div>
           </div>
         </div>
-
          <div class="p-4 border rounded-xl border-[#D3D9DC]">
           <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
             <div>
@@ -247,39 +242,37 @@
             </div>
           </div>
         </div>
-
-         <div class="py-28 px-14 border rounded-xl border-[#D3D9DC]">
-            <div class="flex flex-col justify-between h-full">
-              <div>
+         <div class="py-28 px-14 border rounded-xl border-[#D3D9DC] max-xl:col-span-2 max-sm:col-span-1">
+            <div class="flex flex-col justify-between h-full min-h-40">
+              <div class="text-center">
                 <p class="text-2xl font-bold">Câu hỏi chưa phù hợp?</p>
               </div>
               <div class="text-center">
                 <a href="" class=" inline-block font-bold text-sm border-2 border-primary p-2.5 rounded-2xl mx-auto w-fit">Tôi cần giải đáp</a>
               </div>
-              <div>
-                <p class="text-sm">Chúng tôi sẽ cố gắng phản hồi sớm. Ngoài ra bạn có thể liên hệ tổng đài 09.19005320</p>
+              <div class="text-center">
+                <p class="text-sm  mt-5">Chúng tôi sẽ cố gắng phản hồi sớm. Ngoài ra bạn có thể liên hệ tổng đài 09.19005320</p>
               </div>
             </div>
         </div>
       </div>
     </div>
   </section>
-
   <section class="container mx-auto mt-10">
-    <div class="header-section flex justify-between ">
+  <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
       <div>
         <p class=" text-2xl font-bold">Tin tức</p>
         <p class=" text-base">Nắm bắt kịp thời các khám phá mới và thông tin khuyến mại</p>
       </div>
-      <div class="font-bold">
-        <a class="text-accent p-3">Khám phá</a>
-        <a class="p-3" href="">Khuyến mại</a>
-        <a class="p-3">Tin tức</a>
-        <a class="p-3">...</a>
+    <div class="font-bold">
+        <a class="text-accent text-base max-md:text-xs p-3">Khám phá</a>
+        <a class="text-base p-3 max-md:text-xs" href="">Khuyến mại</a>
+        <a class="text-base p-3 max-md:text-xs">Tin tức</a>
+        <a class="text-base p-3 max-md:text-xs">...</a>
       </div>
     </div>
     <div class="content mt-10">
-      <div class="grid grid-cols-3 gap-5">
+      <div class="grid grid-cols-3 max-md:grid-cols-1  gap-5">
         <%- include("components/news-card.ejs") %>
       </div>
       <div class="mt-2">
@@ -292,7 +285,6 @@
     (function() {
       const slides = document.querySelectorAll('#slider .slide');
       let current = 0;
-
       function showSlide(idx) {
         slides.forEach((slide, i) => {
           slide.style.display = i === idx ? 'block' : 'none';
@@ -306,7 +298,6 @@
         current = (current + 1) % slides.length;
         showSlide(current);
       });
-
       let autoSlide = setInterval(() => {
         current = (current + 1) % slides.length;
         showSlide(current);
@@ -328,5 +319,4 @@
   </script>
   <%- include("layout/footer.ejs") %>
 </body>
-
 </html>

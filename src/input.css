@@ -1,38 +1,39 @@
 @import "tailwindcss";
 @config "./../tailwind.config.js";
+
 /* Font setup */
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
 }
- .container {
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-      background: green;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-      background: blue;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-      background: rgb(28, 174, 193);
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-      background: rgb(26, 199, 13);
-    }
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+
+  @media (width >= 40rem) {
+    max-width: 40rem;
   }
-/* Theme configuration */
+
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+
+  @media (width >= 80rem) {
+    max-width: 80rem;
+  }
+}
+
 @theme {
-  /* 🎨 Màu sắc chủ đạo */
-  --color-primary: #00296B;
-  --color-highlight: #EBA00A;
-  --color-accent: #FF3C13;
-  --color-text-gray: #878C93;
-  --color-bg-gray: #E9EBEE;
-  --color-bg-info: #EEFDFF;
+  --color-primary: #00296b;
+  --color-highlight: #eba00a;
+  --color-accent: #ff3c13;
+  --color-text-gray: #878c93;
+  --color-bg-gray: #e9ebee;
+  --color-bg-info: #eefdff;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flight Booking</title>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./custom.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -705,13 +706,29 @@
                   </div>
                 </div>
                 <div
-                  class="bg-bg-info rounded-xl p-5 flex justify-between items-center"
+                  class="relative list-card-price bg-bg-info rounded-xl p-5 flex justify-between items-center overflow-hidden"
                 >
                   <div
-                    class="card-price flex-1 bg-white p-5 rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.1)] -translate-x-2 hover:-translate-x-4 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer"
+                    class="pre absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer z-1"
                   >
+                    <button
+                      class="bg-primary text-white rounded-xl p-3 opacity-60 cursor-pointer"
+                    >
+                      &lt;
+                    </button>
+                  </div>
+                  <div
+                    class="next absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer z-1"
+                  >
+                    <button
+                      class="bg-primary text-white rounded-xl p-3 opacity-60 cursor-pointer"
+                    >
+                      &gt;
+                    </button>
+                  </div>
+                  <div class="card-price">
                     <div class="flex flex-col gap-4 items-center">
-                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm</p>
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 1</p>
                       <div>
                         <p class="text-accent text-base text-center font-bold">
                           2,800,000 VND
@@ -783,11 +800,9 @@
                       </ul>
                     </div>
                   </div>
-                  <div
-                    class="card-price flex-1 bg-white p-5 rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.1)] -translate-x-2 hover:-translate-x-4 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer"
-                  >
+                  <div class="card-price">
                     <div class="flex flex-col gap-4 items-center">
-                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm</p>
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 2</p>
                       <div>
                         <p class="text-accent text-base text-center font-bold">
                           2,800,000 VND
@@ -859,11 +874,9 @@
                       </ul>
                     </div>
                   </div>
-                  <div
-                    class="card-price flex-1 bg-white p-5 rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.1)] -translate-x-2 hover:-translate-x-4 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer"
-                  >
+                  <div class="card-price">
                     <div class="flex flex-col gap-4 items-center">
-                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm</p>
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 3</p>
                       <div>
                         <p class="text-accent text-base text-center font-bold">
                           2,800,000 VND
@@ -935,9 +948,561 @@
                       </ul>
                     </div>
                   </div>
+                  <div class="card-price border border-highlight">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 4</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-highlight text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-price border border-highlight">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 5</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-highlight text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //INFO CARD -->
+              <!-- //CARD -->
+                <div
+                class="rounded-xl px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.15)] flex flex-col gap-4"
+              >
+                <div class="grid grid-cols-8 items-center gap-4 items-stretch">
+                  <div class="col-span-2">
+                    <div class="flex flex-col gap-4">
+                      <div class="flex gap-3 items-start">
+                        <div>
+                          <img
+                            src="./flight-list/VietnamAirlines.png"
+                            alt=""
+                            class="w-10"
+                          />
+                        </div>
+                        <div class="text-sm">
+                          <p class="font-bold">Vietnam Airlines</p>
+                          <p>VN 617 - A321 Ceo</p>
+                        </div>
+                      </div>
+                      <!-- //// -->
+                    </div>
+                  </div>
+                  <div class="col-span-3 py-2">
+                    <div class="flex flex-col justify-between h-full">
+                      <div class="flex justify-between items-center">
+                        <div class="flex gap-1 items-center">
+                          <p class="text-2xl font-bold">18:55</p>
+                          <p class="text-base">HAN</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <p class="text-xs text-[#D3D9DC]">22h 40m</p>
+                          <img
+                            src="./flight-list/item-flight-list/plane.svg"
+                            alt=""
+                          />
+                          <p class="text-xs text-[#D3D9DC]">2 điểm dừng</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                          <p class="text-base">LHR</p>
+                          <p class="text-2xl font-bold">12:05</p>
+                        </div>
+                      </div>
+                      <div class="flex justify-between">
+                        <div class="flex items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </div>
+                        <div class="flex items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag2.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">20Kg Hành lý ký gửi</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-3">
+                    <div class="flex gap-4 justify-end items-center">
+                      <div class="p-2 border border-bg-info rounded-lg">
+                        <p class="text-xs">Từ</p>
+                        <p
+                          class="min-w-[127px] text-end text-[22px] text-accent leading-5.5"
+                        >
+                          <span class="font-bold">3,240,</span> <br />000VNĐ
+                        </p>
+                        <p class="text-end text-sm">Giá 01 người lớn</p>
+                        <p class="text-end font-bold text-xs">Chi tiết ></p>
+                      </div>
+                      <div
+                        class="min-w-[127px] p-2 border border-highlight rounded-lg"
+                      >
+                        <p class="text-xs">Từ</p>
+                        <p class="text-end text-[22px] text-accent leading-5.5">
+                          <span class="font-bold">3,240,</span> <br />000VNĐ
+                        </p>
+                        <p class="text-end text-sm">Giá 01 người lớn</p>
+                        <p class="text-end font-bold text-xs">Chi tiết ></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="relative list-card-price bg-bg-info rounded-xl p-5 flex justify-between items-center overflow-hidden"
+                >
                   <div
-                    class="card-price flex-1 bg-white p-5 rounded-2xl shadow-[0_8px_20px_rgba(0,0,0,0.1)] -translate-x-2 hover:-translate-x-4 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer border border-highlight"
+                    class="pre absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer z-1"
                   >
+                    <button
+                      class="bg-primary text-white rounded-xl p-3 opacity-60 cursor-pointer"
+                    >
+                      &lt;
+                    </button>
+                  </div>
+                  <div
+                    class="next absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer z-1"
+                  >
+                    <button
+                      class="bg-primary text-white rounded-xl p-3 opacity-60 cursor-pointer"
+                    >
+                      &gt;
+                    </button>
+                  </div>
+                  <div class="card-price">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 6</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-accent text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-price">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 7</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-accent text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-price">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 8</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-accent text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-price border border-highlight">
+                    <div class="flex flex-col gap-4 items-center">
+                      <p class="text-xs font-bold">Phổ thông siêu tiết kiệm 9</p>
+                      <div>
+                        <p class="text-accent text-base text-center font-bold">
+                          2,800,000 VND
+                        </p>
+                        <p class="text-[#B3B0D8] text-xs">
+                          Giá vé cho 03 hành khách
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="bg-highlight text-sm py-1 px-5 text-white rounded-2xl"
+                        >
+                          Chọn vé
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info mt-5">
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul
+                        class="border-b border-gray-300 border-dotted pb-4 mb-4"
+                      >
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                      <ul class="border-dotted pb-4 mb-4">
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                          <img
+                            src="./flight-list/item-flight-list/bag1.svg"
+                            alt=""
+                          />
+                          <p class="text-xs">07kg Hành lý xách tay</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-price border border-highlight">
                     <div class="flex flex-col gap-4 items-center">
                       <p class="text-xs font-bold">Phổ thông siêu tiết kiệm</p>
                       <div>
@@ -1014,7 +1579,6 @@
                 </div>
               </div>
               <!-- //INFO CARD -->
-              <!-- //CARD -->
             </div>
           </div>
         </div>
@@ -1102,6 +1666,27 @@
         </div>
       </div>
     </div>
+    
     <%- include("layout/footer.ejs") %>
+    <script>
+     const listCardPrices = document.querySelectorAll(".list-card-price");
+
+listCardPrices.forEach(listCardPrice => {
+  const nextBtn = listCardPrice.querySelector(".next");
+  const preBtn = listCardPrice.querySelector(".pre");
+
+  nextBtn.addEventListener("click", () => {
+    const cards = listCardPrice.querySelectorAll(".card-price");
+    listCardPrice.appendChild(cards[0]); // đưa thẻ đầu ra cuối
+  });
+
+  preBtn.addEventListener("click", () => {
+    const cards = listCardPrice.querySelectorAll(".card-price");
+    const lastCard = cards[cards.length - 1];
+    listCardPrice.insertBefore(lastCard, cards[0]);
+  });
+});
+
+    </script>
   </body>
 </html>

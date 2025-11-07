@@ -4,18 +4,200 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flight Booking</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="stylesheet" href="./custom.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet"  href="./assets/output-tjMyi7d4.css">
+    <link rel="stylesheet"  href="./assets/custom-CLEC8fDY.css">
   </head>
   <body class="text-primary">
-    <%- include("layout/header.ejs") %> <%-
-    include("components/form-search.ejs") %>
+    <header>
+  <div class="mt-7.5 container mx-auto flex justify-between items-center">
+    <div class="logo">
+      <img src="./logo.svg" class="w-60" alt="Logo vemaybayso.vn" />
+    </div>
+    <div class="info flex items-center gap-6 max-md:hidden">
+      <form class="search border-b-1 flex gap-3.5 p-3.5 w-2xs">
+        <button class="cursor-pointer">
+          <img src="./header/search.svg" alt="Icon Search" />
+        </button>
+        <input
+          type="text"
+          class="text-xl outline-0 w-full"
+          placeholder="Tìm kiếm"
+        />
+      </form>
+      <a href="">
+        <img src="./header/home.svg" class="w-6" alt="Icon home" />
+      </a>
+      <a href="">
+        <img src="./header/facebook.svg" class="w-6" alt="Icon facebook" />
+      </a>
+      <a href="">
+        <img src="./header/tiktok.svg" class="w-6" alt="Icon tiktok" />
+      </a>
+      <a href="tel:0919005320" class="text-primary text-2xl font-bold inline">
+        <img src="./header/phone.svg" alt="Icon phone" class="inline-block" />
+        <span>09.1900.5320</span>
+      </a>
+    </div>
+  </div>
+</header>
+ <section class="container mx-auto mt-7.5 relative">
+  <div class="bg-primary text-white rounded-2xl p-4  shadow-lg">
+    <form class="w-full">
+      <div class="flex flex-wrap items-center gap-5 max-xl:justify-between">
+        <div class="flex gap-5">
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="trip" class="size-4" checked>
+            <span class="text-sm">Một chiều</span>
+          </label>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="trip" class="size-4">
+            <span class="text-sm">Khứ hồi</span>
+          </label>
+        </div>
+        <button type="button" class="flex gap-2">
+          <img src="./search/member.svg" alt="Icon member">
+          <span>Số lượng hành khách</span>
+          <img src="./search/drop-dow.svg" alt="Icon member">
+        </button>
+      </div>
+      <div class=" justify-between gap-3 my-2 grid grid-cols-5 max-xl:grid-cols-2 max-sm:grid-cols-1">
+        <div class="bg-white rounded-md p-3 flex justify-between items-center">
+          <div>
+            <div class="flex gap-2">
+              <img src="./search/plane-start.svg" alt="icon plane">
+              <span class="text-primary text-sm">Điểm khởi hành</span>
+            </div>
+            <p class="text-primary text-lg font-bold line-clamp-1">Hà Nội (HAN)</p>
+          </div>
+          <div class="p-4 border-l border-l-[#D3D9DC]">
+            <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
+          </div>
+        </div>
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
+          <div>
+            <div class="flex gap-2">
+              <img src="./search/plane-start.svg" alt="icon plane">
+              <span class="text-primary text-sm">Điểm khởi hành</span>
+            </div>
+            <p class="text-primary text-lg font-bold line-clamp-1">Hồ Chí Minh (SGN)</p>
+          </div>
+          <div class="p-4 border-l border-l-[#D3D9DC]">
+            <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
+          </div>
+        </div>
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
+          <div>
+            <div class="flex gap-2">
+              <img src="./search/calender.svg" alt="icon plane">
+              <span class="text-primary text-sm">Ngày đi</span>
+            </div>
+            <p class="text-primary text-lg font-bold line-clamp-1">20/11/2025</p>
+          </div>
+          <div class="p-4 border-l border-l-[#D3D9DC]">
+            <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
+          </div>
+        </div>
+       <div class="bg-white  rounded-md p-3 flex justify-between items-center">
+          <div>
+            <div class="flex gap-2">
+              <img src="./search/calender.svg" alt="icon plane">
+              <span class="text-primary text-sm">Ngày về</span>
+            </div>
+            <p class="text-primary text-lg font-bold line-clamp-1">26/11/2025</p>
+          </div>
+          <div class="p-4 border-l border-l-[#D3D9DC]">
+            <img src="./search/drop-dow-gray.svg" alt="icon drop dow">
+          </div>
+        </div>
+        <div class="bg-accent  rounded-md max-xl:col-span-2 max-sm:col-span-1 max-xl:py-6">
+          <button class="w-full h-full uppercase font-bold text-[22px]">Tìm kiếm</button>
+        </div>
+      </div>
+    </form>
+
+
+
+
+<!-- LOCATION -->
+<div class=" hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-[#02066F]">
+  <div>
+    <p class="text-2xl font-bold">Nhập Mã Sân bay hoặc Tên Thành phố</p>
+  </div>
+
+  <div class="flex flex-wrap gap-4 items-center ">
+    <label class="flex items-center gap-2 rounded-xl border border-[#CAF0F8] px-4 py-2 max-w-[240px]">
+      <div>
+        <img src="./search/search.svg" alt="">
+      </div>
+      <div>
+        <p class="text-sm">Tìm kiếm Sân Bay:</p>
+        <input type="text" class="w-full outline-none" placeholder="Ví dụ: HAN">
+      </div>
+    </label>
+    <label class="bg-primary text-white rounded-lg font-bold px-4 py-2 cursor-pointer">
+      Việt Nam
+    </label>
+    <label class="bg-bg-info text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
+      Châu Á
+    </label>
+    <label class="bg-bg-info text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
+      Châu Âu
+    </label>
+    <label class="bg-bg-info text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
+      Hoa Kỳ - Canada
+    </label>
+    <label class="bg-bg-info text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
+      Châu Úc - Phi
+    </label>
+  </div>
+
+  <div class="shadow-[0px_8px_30px_rgba(0,0,0,0.15)] py-6 px-9 rounded-xl">
+    <p class="text-accent text-2xl mb-7">Nội địa - Sân bay tại Việt Nam</p>
+
+    <div class="grid grid-cols-3 gap-8 ">
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">HAN</p><p class="text-xl">Hà Nội</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">SGN</p><p class="text-xl">Hồ Chí Minh</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">DAD</p><p class="text-xl">Đà Nẵng</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">HPH</p><p class="text-xl">Hải Phòng</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">THD</p><p class="text-xl">Thanh Hóa</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VCA</p><p class="text-xl">Cần Thơ</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VII</p><p class="text-xl">Vinh</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VDH</p><p class="text-xl">Quảng Bình</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">CXR</p><p class="text-xl">Nha Trang</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">DLI</p><p class="text-xl">Đà Lạt</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">PXU</p><p class="text-xl">Pleiku</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">TBB</p><p class="text-xl">Phú Yên</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">BMV</p><p class="text-xl">Ban Mê Thuột</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VKG</p><p class="text-xl">Kiên Giang</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">DIN</p><p class="text-xl">Điện Biên</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VDO</p><p class="text-xl">Vân Đồn</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">UIH</p><p class="text-xl">Quy Nhơn</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">HUI</p><p class="text-xl">Huế</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">PQC</p><p class="text-xl">Phú Quốc</p></div>
+      <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3"><p class="font-bold text-[32px] uppercase">VCS</p><p class="text-xl">Côn Đảo</p></div>
+    </div>
+  </div>
+</div>
+<!-- END LOCATION -->
+ <!-- DATE -->
+
+ 
+
+ <!-- END DATE -->
+
+
+
+
+
+
+</section>
+
     <section class="container mx-auto mt-8">
       <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
         <div>
@@ -1667,7 +1849,235 @@
       </div>
     </div>
     
-    <%- include("layout/footer.ejs") %>
+    <div id="respon" class="fixed top-0 left-0 w-full bg-blue-600 text-white text-center font-black text-lg z-[100000] p-2">
+  <div class="block sm:hidden">SM</div>
+  <div class="hidden sm:block md:hidden">MD</div>
+  <div class="hidden md:block lg:hidden">LG</div>
+  <div class="hidden lg:block xl:hidden">XL</div>
+  <div class="hidden xl:block">2XL</div>
+</div>
+
+<footer class="mt-10 ">
+  <div class="bg-bg-info pt-4 pb-10">
+    <div class="container mx-auto">
+      <h2 class="font-bold text-4xl max-md:text-3xl ">Cách thức đặt vé máy bay giá rẻ</h2>
+      <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
+        <div class="flex gap-2 items-center">
+          <div>
+            <p class="text-accent text-9xl font-bold">1</p>
+          </div>
+          <div>
+            <p class="text-2xl">
+              Đặt vé và thanh toán vé ngay trên website
+              <strong>
+                www.vemaybayso.vn
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-2 items-center">
+          <div>
+            <p class="text-accent text-9xl font-bold">2</p>
+          </div>
+          <div>
+            <p class="text-2xl">
+              Đặt vé qua tổng đài CSKH <strong class="text-accent">09.1900.5320</strong> và các công cụ Chat
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-2 items-center">
+          <div>
+            <p class="text-accent text-9xl font-bold">3</p>
+          </div>
+          <div>
+            <p class="text-2xl">
+              Đến trực tiếp các điểm giao dịch hoặc văn phòng của Vemaybayso
+            </p>
+          </div>
+        </div>
+        <div></div>
+        <div class="flex justify-around">
+          <div class="flex flex-col items-center gap-3.5">
+            <div>
+              <a href=""><img src="./footer/zalo.svg" alt=""></a>
+            </div>
+            <p>Zalo</p>
+          </div>
+          <div class="flex flex-col items-center gap-3.5">
+            <div>
+              <a href=""><img src="./footer/mess.svg" alt=""></a>
+            </div>
+            <p>Messenger</p>
+          </div>
+          <div class="flex flex-col items-center gap-3.5">
+            <div>
+              <a href=""><img src="./footer/whatup.svg" alt=""></a>
+            </div>
+            <p>What Up</p>
+          </div>
+        </div>
+        <div>
+          <ul class="space-y-1">
+            <li class="flex items-start gap-2">
+              <span class="w-2.5 h-2.5 bg-red-500 rounded-full mt-2"></span>
+              <span class="text-base">Số 7 Ngõ 4 P. Đào Hinh, Việt Hưng, Long Biên, Hà Nội.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="w-2.5 h-2.5 bg-red-500 rounded-full mt-2"></span>
+              <span class="text-base">Số 226, Tổ 17, Phường Tân Thanh, TP. Điện Biên Phủ, Tỉnh Điện Biên</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" relative bg-primary pt-20 pb-14 text-white">
+    <div class="container mx-auto">
+      <div class="absolute -top-[60px] flex items-end">
+        <p class="text-accent text-9xl font-bold">4</p>
+        <p class="text-2xl text-white font-bold">Đặt vé trên ứng dụng ngân hàng</p>
+      </div>
+      <div class="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-7">
+        <div class="flex flex-col gap-3">
+          <div>
+            <img src="./footer/Mbbank.png" class="w-full h-30 object-cover" alt="">
+          </div>
+          <div>
+            <p class="text-xl font-bold">
+              Ngân hàng MBBank
+            </p>
+          </div>
+          <div>
+            <p class="text-sm">Vé máy bay số chính thức triển khai bán hàng trên ngân hàng thương mại cổ phần Quân đội từ năm 2023. </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div>
+            <img src="./footer/Msbbank.png" class="w-full h-30 object-cover" alt="">
+          </div>
+          <div>
+            <p class="text-xl font-bold">
+              Ngân hàng MSBBank
+            </p>
+          </div>
+          <div>
+            <p class="text-sm">Vé máy bay số chính thức triển khai bán hàng trên ngân hàng thương mại cổ phần Quân đội từ năm 2023. </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div>
+            <img src="./footer/SeABank.png" class="w-full h-30 object-cover" alt="">
+          </div>
+          <div>
+            <p class="text-xl font-bold">
+              Ngân hàng MBBank
+            </p>
+          </div>
+          <div>
+            <p class="text-sm">Vé máy bay số chính thức triển khai bán hàng trên ngân hàng thương mại cổ phần Quân đội từ năm 2023. </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div>
+            <img src="./footer/Mbbank.png" class="w-full h-30 object-cover" alt="">
+          </div>
+          <div>
+            <p class="text-xl font-bold">
+              Ngân hàng MBBank
+            </p>
+          </div>
+          <div>
+            <p class="text-sm">Vé máy bay số chính thức triển khai bán hàng trên ngân hàng thương mại cổ phần Quân đội từ năm 2023. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#CAF0F8] py-6">
+    <form action="" class="container mx-auto flex flex-col gap-4">
+      <h2 class="text-2xl font-bold">Liên hệ nhanh | Đăng ký nhận bản tin</h2>
+      <div class="grid grid-cols-4 gap-7 max-xl:grid-cols-5 max-md:grid-cols-1">
+        <div class="bg-white px-2.5 py-1.5 rounded-lg col-span-1 max-xl:col-span-2 max-md:col-span-1 ">
+          <label class="text-sm">Email: <span class="text-accent">*</span>
+            <br>
+            <input type="text" class="text-lg font-bold w-full outline-none" placeholder="Nhập địa chỉ email của bạn">
+          </label>
+        </div>
+        <div class="bg-white px-2.5 py-1.5 rounded-lg col-span-2 max-xl:col-span-3  max-md:col-span-1 ">
+          <label class="text-sm">Nội dung ngắn gọn:
+            <br>
+            <input type="text" class="text-lg font-bold w-full outline-none" placeholder="Thông tin cần gửi cho chúng tôi">
+          </label>
+        </div>
+        <div class="bg-primary flex items-center justify-center rounded-lg col-span-1 max-xl:col-span-5  max-md:col-span-1 ">
+          <button class="text-white px-9 py-4 font-bold text-base">GỬI/NHẬN THÔNG TIN</button>
+        </div>
+      </div>
+      <div class="flex items-start gap-2">
+        <input type="checkbox" name="" value="">
+        <p>Tôi đồng ý cho <strong>Vé máy bay số</strong>. và <strong>Cty CP Tập đoàn Công nghệ và Du lịch Thịnh Vượng</strong> xử lý dữ liệu cá nhân của tôi cho mục đích tiếp thị, trong phạm vi và mục đích được nêu trong "Thông tin về việc xử lý dữ liệu cá nhân" , thông qua phương tiện liên lạc điện tử (e-mail), bao gồm cả việc sử dụng cái gọi là hệ thống gọi tự động.</p>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div class="py-7 container mx-auto">
+      <div class="grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <!-- Giới thiệu -->
+        <div>
+          <ul>
+            <p class="font-bold mb-6 text-base">Giới thiệu</p>
+            <li><a class="text-xs" href="">Tập đoàn Protech Group</a></li>
+            <li><a class="text-xs" href="">Vé máy bay số</a></li>
+            <li><a class="text-xs" href="">Điều khoản và Điều kiện của Trang web</a></li>
+            <li><a class="text-xs" href="">Chính sách bảo mật</a></li>
+            <li><a class="text-xs" href="">Các đối tác của chúng tôi</a></li>
+            <li><a class="text-xs" href="">Liên hệ</a></li>
+          </ul>
+        </div>
+        <!-- Thông tin hữu ích -->
+        <div>
+          <ul>
+            <p class="font-bold mb-6 text-base">Thông tin hữu ích</p>
+            <li><a class="text-xs" href="">Khám phá du lịch bằng máy bay</a></li>
+            <li><a class="text-xs" href="">Hướng dẫn đặt vé trên Website</a></li>
+            <li><a class="text-xs" href="">Cách thức thanh toán và nhận vé</a></li>
+            <li><a class="text-xs" href="">Tra cứu lại vé đã thanh toán</a></li>
+            <li><a class="text-xs" href="">Đặt vé đoàn, vé tour theo yêu cầu</a></li>
+            <li><a class="text-xs" href="">Khiếu nại thông tin</a></li>
+          </ul>
+        </div>
+        <!-- Hotline + Công ty -->
+        <div>
+          <p class="text-2xl font-bold text-accent">09 1900 5320</p>
+          <p class="text-sm font-bold">Hotline 24/7</p>
+          <p class="font-bold text-xs mt-7">
+            CÔNG TY CỔ PHẦN VÉ MÁY BAY SỐ<br>
+            TẬP ĐOÀN CÔNG NGHỆ VÀ DU LỊCH THỊNH VƯỢNG
+          </p>
+          <p class="text-xs mt-1">Địa chỉ: Số 12 Hẻm 481/69/135 Ngọc Lâm, Phường Bồ Đề, Thành phố Hà Nội, Việt Nam.</p>
+        </div>
+        <!-- Mạng xã hội + đăng ký -->
+        <div class="flex flex-col gap-8">
+          <ul class="flex gap-10 items-end">
+            <li><a href=""><img src="./footer/face.svg"  class="w-8" alt=""></a></li>
+            <li><a href=""><img src="./footer/tiktok.svg"  class="w-8" alt=""></a></li>
+            <li><a href=""><img src="./footer/youtube.svg"  class="w-8" alt=""></a></li>
+            <li><a href=""><img src="./footer/whatup.svg"  class="w-8" alt=""></a></li>
+          </ul>
+          <form action="" class="flex justify-between overflow-hidden rounded-2xl border border-[#D3D9DC] max-h-10 w-[240px]">
+            <input type="text" placeholder="Email" class="outline-0 p-4 max-w-[150px] text-xs">
+            <button class="bg-[linear-gradient(90deg,#00296B_16%,#FF3C13_100%)] py-3.5 px-5 w-[90px] text-xs font-bold text-white text-center">Đang Ký</button>
+          </form>
+          <div>
+            <img src="./footer/bocongthuong.png" alt="" class="w-[158px]">
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="bg-[#D3D9DC] py-4 text-center">
+    <p class="text-xs">@ 2023 Bản quyền thuộc Công ty Cổ phần Vé Máy Bay Số. Bảo lưu mọi quyền. Mã số DKKD/Thuế: 0110048815</p>
+  </div>
+</footer>
     <script>
      const listCardPrices = document.querySelectorAll(".list-card-price");
 

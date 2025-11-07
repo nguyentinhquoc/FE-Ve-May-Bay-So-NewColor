@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { ViteEjsPlugin } from "vite-plugin-ejs";
-import vitePluginHtmlMpa from "vite-plugin-html-mpa"; // ✅ import mặc định
+import vitePluginHtmlMpa from "vite-plugin-html-mpa";
 
 export default defineConfig({
   server: {
@@ -9,11 +9,21 @@ export default defineConfig({
   },
   root: "src",
   publicDir: "../public",
+  build: {
+    outDir: "../dist", // build ra ngoài src
+    rollupOptions: {
+      input: {
+        index: "src/index.html",
+        flightList: "src/flight-list.html",
+        flightPayment: "src/flight-payment.html",
+        flightinfo: "src/flight-info.html",
+      },
+    },
+  },
   plugins: [
     ViteEjsPlugin(),
     vitePluginHtmlMpa({
-      scanDir: "src",      // Quét tất cả file .html trong src
-      open: "/index.html", // Trang mở mặc định khi dev
+      scanDir: "src", // tự động quét HTML trong src
     }),
   ],
 });

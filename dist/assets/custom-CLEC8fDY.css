@@ -1,1 +1,0 @@
-.card-price{max-width:25%;min-width:25%;background:#fff;padding:1.25rem;border-radius:1rem;box-shadow:0 8px 20px #0000001a;transition:all .5s cubic-bezier(.4,0,.2,1);cursor:pointer;will-change:transform,box-shadow}.card-price:hover,.card-price:focus{transform:translate(-1rem) translateY(-.25rem) scale(1.05);box-shadow:0 12px 28px #00000026;outline:none}

@@ -1,16 +1,72 @@
+// ==== FORM SEARCH ====
+// ELEMENT event
+const formSearchInput = document.getElementById("form-search-input");
+const departurePointInput = document.getElementById("departure-point-input");
+const arrivalPointInput = document.getElementById("arrival-point-input");
+const departureDateInput = document.getElementById("departure-date-input");
+const returnDateInput = document.getElementById("return-date-input");
+// ELEMENT value
+const departurePointValue = document.getElementById("departure-point-value");
+const arrivalPointValue = document.getElementById("arrival-point-value");
+const departureDateValue = document.getElementById("departure-date-value");
+const returnDateValue = document.getElementById("return-date-value");
+
+// Toggle location modal
+const locationModal = document.getElementById("location-modal");
+const dateModal = document.getElementById("date-modal");
+
+let selectedInput = null;
+let typePlane = "one_way"; // one_way || round_trip
+const todayFix = new Date().toLocaleDateString("vi-VN");
+departureDateValue.value = todayFix;
+returnDateValue.value = todayFix;
+departureDateInput.querySelector(".display").textContent = todayFix;
+returnDateInput.querySelector(".display").textContent = todayFix;
+departurePointInput.addEventListener("click", (elem) => {
+  selectedInput = "departure_point";
+  locationModal.classList.toggle("hidden");
+});
+arrivalPointInput.addEventListener("click", (elem) => {
+  selectedInput = "arrival_point";
+  locationModal.classList.toggle("hidden");
+});
+departureDateInput.addEventListener("click", (elem) => {
+  selectedInput = "departure_date";
+  dateModal.classList.toggle("hidden");
+});
+returnDateInput.addEventListener("click", (elem) => {
+  selectedInput = "return_date";
+  dateModal.classList.toggle("hidden");
+});
+
+// Chọn địa điểm trong modal
+locationModal.querySelectorAll(".location-option").forEach((elem) => {
+  elem.addEventListener("click", (e) => {
+    const name = e.target.closest(".location-option").querySelector(".name");
+    const code = e.target.closest(".location-option").querySelector(".code");
+    if (selectedInput === "departure_point") {
+      departurePointInput.querySelector(".display").textContent = `${name.textContent} (${code.textContent})`;
+      // SetValue location hidden input
+      departurePointValue.value = code.textContent;
+    } else if (selectedInput === "arrival_point") {
+      arrivalPointInput.querySelector(".display").textContent = `${name.textContent} (${code.textContent})`;
+      // SetValue location hidden input
+      arrivalPointValue.value = code.textContent;
+    }
+    locationModal.classList.add("hidden");
+  });
+});
+// Change Một chiều || Khứ hồi form search
 document.querySelectorAll('input[name="trip"]').forEach((elem) => {
   elem.addEventListener("change", function (event) {
     const value = event.target.id;
-    console.log("🚀 ~ value:", value);
-    const formSearchInput = document.getElementById("form-search-input");
-    const departureDateInput = document.getElementById("departure-date-input");
-    const returnDateInput = document.getElementById("return-date-input");
+    typePlane = event.target.value;
+    document.querySelectorAll(".days div").forEach((el) => el.classList.remove("start", "end", "range"));
     if (value === "one_way") {
       formSearchInput.classList.remove("grid-cols-5");
       formSearchInput.classList.add("grid-cols-4");
       departureDateInput.classList.add("max-xl:col-span-2");
       returnDateInput.classList.add("hidden");
-
     } else {
       formSearchInput.classList.add("grid-cols-5");
       formSearchInput.classList.remove("grid-cols-4");
@@ -19,6 +75,7 @@ document.querySelectorAll('input[name="trip"]').forEach((elem) => {
     }
   });
 });
+
 // / CALENDER ÂM DƯƠNG LỊCH VIỆT NAM ====
 function INT(d) {
   return Math.floor(d);
@@ -168,7 +225,11 @@ function renderCalendar(year, month) {
 
   for (let day = 1; day <= daysInMonth; day++) {
     const date = new Date(year, month, day);
-    const dateStr = date.toISOString().split("T")[0];
+    const dateStr = [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, "0"),
+      String(date.getDate()).padStart(2, "0"),
+    ].join("-");
     const lunar = getLunarDate(day, month + 1, year);
     const solarKey = `${String(day).padStart(2, "0")}-${String(month + 1).padStart(2, "0")}`;
     const lunarKey = `${String(lunar.day).padStart(2, "0")}-${String(lunar.month).padStart(2, "0")}`;
@@ -203,6 +264,13 @@ function renderRangePicker() {
 }
 
 function handleDateClick(el) {
+  if (typePlane === "one_way") {
+    const date = new Date(el.dataset.date).toLocaleDateString("vi-VN");
+    departureDateInput.querySelector(".display").textContent = date;
+    departureDateValue.value = date;
+    dateModal.classList.add("hidden");
+    return;
+  }
   const d = new Date(el.dataset.date);
   if (!startDate || (startDate && endDate)) {
     startDate = d;
@@ -223,11 +291,16 @@ function updateRangeHighlight() {
     if (endDate && d.toDateString() === endDate.toDateString()) el.classList.add("end");
     if (endDate && d > startDate && d < endDate) el.classList.add("range");
   });
-  const info = document.getElementById("range-info");
-  if (startDate && endDate)
-    info.textContent = `Từ ${startDate.toLocaleDateString("vi-VN")} → ${endDate.toLocaleDateString("vi-VN")}`;
-  else if (startDate) info.textContent = `Ngày bắt đầu: ${startDate.toLocaleDateString("vi-VN")}`;
-  else info.textContent = "";
+  if (startDate && endDate) {
+    departureDateInput.querySelector(".display").textContent = startDate.toLocaleDateString("vi-VN");
+    departureDateValue.value = startDate.toLocaleDateString("vi-VN");
+    returnDateInput.querySelector(".display").textContent = endDate.toLocaleDateString("vi-VN");
+    returnDateValue.value = endDate.toLocaleDateString("vi-VN");
+    dateModal.classList.add("hidden");
+  } else if (startDate) {
+    departureDateInput.querySelector(".display").textContent = startDate.toLocaleDateString("vi-VN");
+    departureDateValue.value = startDate.toLocaleDateString("vi-VN");
+  } else console.log("+++++++++++++++++++++");
 }
 
 document.getElementById("prev").onclick = () => {

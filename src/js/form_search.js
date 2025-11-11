@@ -321,3 +321,31 @@ document.getElementById("next").onclick = () => {
 };
 
 renderRangePicker();
+
+const locationOptions = document.querySelectorAll('.location-option')
+const typeCityIp = document.querySelectorAll(".typeCity")
+// fillter Modal city
+function filterModalCity(value){
+ locationOptions.forEach((locationOption)=>{
+      if (locationOption.dataset.citytype === value) {
+        locationOption.hidden = false
+      }else{
+        locationOption.hidden = true
+      }
+    })
+}
+filterModalCity(typeCityIp[0].value)
+
+typeCityIp.forEach((elem) => {
+  elem.onclick = () => {
+    // Xóa hết background checked
+    typeCityIp.forEach((e) => {
+      e.closest("label").classList.remove("bg-primary", "text-white");
+    });
+    // add background checked cho item đang checked
+    elem.closest("label").classList.add("bg-primary", "text-white");
+
+   
+
+  };
+});

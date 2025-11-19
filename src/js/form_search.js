@@ -25,18 +25,22 @@ returnDateInput.querySelector(".display").textContent = todayFix;
 departurePointInput.addEventListener("click", (elem) => {
   selectedInput = "departure_point";
   locationModal.classList.toggle("hidden");
+  dateModal.classList.add("hidden");
 });
 arrivalPointInput.addEventListener("click", (elem) => {
   selectedInput = "arrival_point";
   locationModal.classList.toggle("hidden");
+  dateModal.classList.add("hidden");
 });
 departureDateInput.addEventListener("click", (elem) => {
   selectedInput = "departure_date";
   dateModal.classList.toggle("hidden");
+  locationModal.classList.add("hidden");
 });
 returnDateInput.addEventListener("click", (elem) => {
   selectedInput = "return_date";
   dateModal.classList.toggle("hidden");
+  locationModal.classList.add("hidden");
 });
 
 // Chọn địa điểm trong modal
@@ -322,19 +326,19 @@ document.getElementById("next").onclick = () => {
 
 renderRangePicker();
 
-const locationOptions = document.querySelectorAll('.location-option')
-const typeCityIp = document.querySelectorAll(".typeCity")
+const locationOptions = document.querySelectorAll(".location-option");
+const typeCityIp = document.querySelectorAll(".typeCity");
 // fillter Modal city
-function filterModalCity(value){
- locationOptions.forEach((locationOption)=>{
-      if (locationOption.dataset.citytype === value) {
-        locationOption.hidden = false
-      }else{
-        locationOption.hidden = true
-      }
-    })
+function filterModalCity(value) {
+  locationOptions.forEach((locationOption) => {
+    if (locationOption.dataset.citytype === value) {
+      locationOption.hidden = false;
+    } else {
+      locationOption.hidden = true;
+    }
+  });
 }
-filterModalCity(typeCityIp[0].value)
+filterModalCity(typeCityIp[0].value);
 
 typeCityIp.forEach((elem) => {
   elem.onclick = () => {
@@ -343,9 +347,7 @@ typeCityIp.forEach((elem) => {
       e.closest("label").classList.remove("bg-primary", "text-white");
     });
     // add background checked cho item đang checked
+    filterModalCity(elem.value);
     elem.closest("label").classList.add("bg-primary", "text-white");
-
-   
-
   };
 });

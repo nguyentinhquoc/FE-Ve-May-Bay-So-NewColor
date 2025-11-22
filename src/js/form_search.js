@@ -5,6 +5,8 @@ const departurePointInput = document.getElementById("departure-point-input");
 const arrivalPointInput = document.getElementById("arrival-point-input");
 const departureDateInput = document.getElementById("departure-date-input");
 const returnDateInput = document.getElementById("return-date-input");
+const personInput = document.getElementById("person-input");
+const personInputChange = document.querySelectorAll(".person-input-change");
 // ELEMENT value
 const departurePointValue = document.getElementById("departure-point-value");
 const arrivalPointValue = document.getElementById("arrival-point-value");
@@ -14,6 +16,10 @@ const returnDateValue = document.getElementById("return-date-value");
 // Toggle location modal
 const locationModal = document.getElementById("location-modal");
 const dateModal = document.getElementById("date-modal");
+const quantityModal = document.getElementById("quantity-modal");
+
+// ==== EVENT LISTENER ====
+// Mở modal location || date || quantity
 
 let selectedInput = null;
 let typePlane = "one_way"; // one_way || round_trip
@@ -22,25 +28,89 @@ departureDateValue.value = todayFix;
 returnDateValue.value = todayFix;
 departureDateInput.querySelector(".display").textContent = todayFix;
 returnDateInput.querySelector(".display").textContent = todayFix;
+
+personInput.addEventListener("click", (elem) => {
+  selectedInput = "person";
+  quantityModal.classList.toggle("hidden");
+  locationModal.classList.add("hidden");
+  dateModal.classList.add("hidden");
+});
 departurePointInput.addEventListener("click", (elem) => {
   selectedInput = "departure_point";
   locationModal.classList.toggle("hidden");
+  quantityModal.classList.add("hidden");
   dateModal.classList.add("hidden");
 });
 arrivalPointInput.addEventListener("click", (elem) => {
   selectedInput = "arrival_point";
   locationModal.classList.toggle("hidden");
+  quantityModal.classList.add("hidden");
   dateModal.classList.add("hidden");
 });
 departureDateInput.addEventListener("click", (elem) => {
   selectedInput = "departure_date";
   dateModal.classList.toggle("hidden");
+  quantityModal.classList.add("hidden");
   locationModal.classList.add("hidden");
 });
 returnDateInput.addEventListener("click", (elem) => {
   selectedInput = "return_date";
   dateModal.classList.toggle("hidden");
+  quantityModal.classList.add("hidden");
   locationModal.classList.add("hidden");
+});
+// Cập nhật số lượng hành khách
+personInputChange.forEach((elem) => {
+  const minusButton = elem.querySelector(".minus-button");
+  const plusButton = elem.querySelector(".plus-button");
+  const valueInput = elem.querySelector('input[type="text"]');
+  let textRender = "";
+  minusButton.addEventListener("click", () => {
+    let currentValue = parseInt(valueInput.value);
+    if (elem.dataset.type === "adult-passenger-value") {
+      if (currentValue > 1) valueInput.value = currentValue - 1;
+    } else {
+      if (currentValue > 0) valueInput.value = currentValue - 1;
+    }
+    textRender =
+      `${parseInt(
+        document.querySelector('.person-input-change[data-type="adult-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Người lớn, ${parseInt(
+        document.querySelector('.person-input-change[data-type="child-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Trẻ em, ${parseInt(
+        document.querySelector('.person-input-change[data-type="infant-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Em bé`;
+    document.getElementById("render-person").textContent = textRender;
+  });
+  plusButton.addEventListener("click", () => {
+    let currentValue = parseInt(valueInput.value);
+    if (elem.dataset.type === "adult-passenger-value" || elem.dataset.type === "child-passenger-value") {
+      const adultValue = parseInt(
+        document.querySelector('.person-input-change[data-type="adult-passenger-value"] input[type="text"]').value
+      );
+      const childValue = parseInt(
+        document.querySelector('.person-input-change[data-type="child-passenger-value"] input[type="text"]').value
+      );
+      if (adultValue + childValue < 7) valueInput.value = currentValue + 1;
+    } else {
+      if (currentValue < 5) valueInput.value = currentValue + 1;
+    }
+    textRender =
+      `${parseInt(
+        document.querySelector('.person-input-change[data-type="adult-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Người lớn, ${parseInt(
+        document.querySelector('.person-input-change[data-type="child-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Trẻ em, ${parseInt(
+        document.querySelector('.person-input-change[data-type="infant-passenger-value"] input[type="text"]').value
+      )}` +
+      ` Em bé`;
+    document.getElementById("render-person").textContent = textRender;
+  });
 });
 
 // Chọn địa điểm trong modal
@@ -350,4 +420,18 @@ typeCityIp.forEach((elem) => {
     filterModalCity(elem.value);
     elem.closest("label").classList.add("bg-primary", "text-white");
   };
+});
+
+///////// Custom select /////////
+document.querySelectorAll(".select-customer-wrapper").forEach((elem) => {
+  elem.addEventListener("click", () => {
+    elem.querySelector(".select-customer-dropdown").classList.toggle("hidden");
+  });
+  elem.querySelectorAll(".option").forEach((option) => {
+    option.addEventListener("click", (e) => {
+      const selectedText = e.target.closest(".option").textContent.trim();
+      elem.querySelector(".text-render").textContent = selectedText;
+      elem.querySelector('input[type="hidden"]').value = e.target.closest(".option").dataset.value;
+    });
+  });
 });

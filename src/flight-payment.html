@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="content mt-5 mb-[190px]">
-        <div class="grid-cols-4 grid gap-5 items-start">
+        <div class="grid-cols-4 grid gap-5 items-start max-lg:grid-cols-1">
           <div class="flight-list col-span-3">
             <div class="flex flex-col gap-4">
               <!-- // Box  -->
@@ -40,7 +40,7 @@
                   </div>
                   <p class="text-xl font-bold">Thông tin đặt chỗ</p>
                 </div>
-                <div class="grid grid-cols-3 gap-3 py-4 px-6">
+                <div class="grid grid-cols-3  gap-2 py-4 px-6 max-md:grid-cols-2 max-sm:grid-cols-1">
                   <div class="flex flex-col gap-2">
                     <p>Trạng thái đặt chỗ</p>
                     <p class="text-accent font-semibold text-xl">Chưa thanh toán</p>
@@ -93,7 +93,7 @@
                   </div>
                   <p class="text-xl font-bold">Thông tin hành khách</p>
                 </div>
-                <div class="grid grid-cols-3 gap-3 py-4 px-6">
+                <div class="grid grid-cols-3 gap-3 py-4 px-6  max-md:grid-cols-2 max-sm:grid-cols-1">
                   <div class="col-span-1 flex flex-col gap-2">
                     <p>Loại vé</p>
                     <p class="font-semibold text-xl mb-6">Khứ hồi</p>
@@ -115,7 +115,7 @@
               <!-- // BOX THÔNG TIN VÉ CHIỀU ĐI -->
               <div class="rounded-xl shadow-[0_0_18px_rgba(0,0,0,0.15)]">
                 <div class="py-4 px-6 border-b border-[#B3B0D8]">
-                  <div class="flex gap-2 items-center">
+                  <div class="flex gap-2 items-start">
                     <div>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_4292_6229)">
@@ -134,7 +134,7 @@
                         </defs>
                       </svg>
                     </div>
-                    <div class="flex gap-8">
+                    <div class="flex gap-8 max-md:flex-col max-md:gap-2">
                       <p class="text-xl font-semibold">Chuyến bay - VIETJET AIR (VJ)2214</p>
                       <p class="text-xl font-semibold">20/11/2025 - 20/11/2025</p>
                     </div>
@@ -146,8 +146,8 @@
                   </p>
                 </div>
                 <div class="py-4 px-6 border-b border-[#B3B0D8]">
-                  <div class="grid grid-cols-3 gap-5 items-end">
-                    <div class="flex flex-col gap-2">
+                  <div class="grid grid-cols-3  max-md:grid-cols-4  gap-5 items-end">
+                    <div class="flex flex-col gap-2 max-md:col-span-4">
                       <div class="flex gap-2 items-center">
                         <div>
                           <img src="./airline/VietJetAir.svg" alt="" class="w-14 h-14" />
@@ -156,7 +156,7 @@
                       </div>
                       <p>Số hiệu CB: <span class="text-xl font-semibold">VJ2214</span></p>
                     </div>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 max-md:col-span-2 max-sm:col-span-4 ">
                       <p>Khởi hành</p>
                       <div>
                         <div class="flex gap-2">
@@ -179,8 +179,8 @@
                         <p>Noi Bai Intl Arpt</p>
                       </div>
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <p>Khởi hành</p>
+                    <div class="flex flex-col gap-2 max-md:col-span-2 max-sm:col-span-4 ">
+                      <p>Điểm đến</p>
                       <div>
                         <div class="flex gap-2">
                           <div>
@@ -204,18 +204,20 @@
                     </div>
                   </div>
 
-                  <div class="grid grid-cols-3 gap-5 mt-7">
+                  <div class="grid grid-cols-3 gap-5 mt-7 max-sm:grid-cols-1">
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Số hiệu hãng: <span class="text-xl font-semibold">VJVNHN</span></p>
                       <p class="min-h-7">Trạng thái vé: <span class="text-xl font-semibold">Đã xác nhận</span></p>
                       <p class="min-h-7">Thời gian bay: <span class="text-xl font-semibold">01giờ 45 phút</span></p>
                     </div>
+                    <div class=" hidden max-sm:block border-b border-amber-200"></div>
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Ha Noi, VN</p>
                       <p class="min-h-7">Terminal 1</p>
                       <p class="text-4xl font-semibold">14:30</p>
                       <p class="min-h-7">Thứ 6, 20/11/2025</p>
                     </div>
+                    <div class=" hidden max-sm:block border-b border-amber-200"></div>
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Ho Chi Minh, VN</p>
                       <p class="min-h-7">Terminal 1</p>
@@ -224,8 +226,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="py-4 px-6 grid grid-cols-3 gap-5">
-                  <div class="col-span-1 flex gap-2">
+                <div class="py-4 px-6 grid grid-cols-5 max-md:grid-cols-1 gap-5">
+                  <div class="col-span-2 flex gap-2">
                     <div class="min-w-8">
                       <img src="./flight-payment/bag.svg" alt="" />
                     </div>
@@ -253,7 +255,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-span-2 flex gap-2">
+                  <div class="col-span-3 flex gap-2">
                     <div class="min-w-8 h-8">
                       <img src="./flight-payment/ticket.svg" alt="" />
                     </div>
@@ -278,9 +280,9 @@
                 </div>
               </div>
               <!-- // BOX THÔNG TIN VÉ CHIỀU ĐI -->
-              <div class="rounded-xl shadow-[0_0_18px_rgba(0,0,0,0.15)]">
+             <div class="rounded-xl shadow-[0_0_18px_rgba(0,0,0,0.15)]">
                 <div class="py-4 px-6 border-b border-[#B3B0D8]">
-                  <div class="flex gap-2 items-center">
+                  <div class="flex gap-2 items-start">
                     <div>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_4292_6229)">
@@ -299,7 +301,7 @@
                         </defs>
                       </svg>
                     </div>
-                    <div class="flex gap-8">
+                    <div class="flex gap-8 max-md:flex-col max-md:gap-2">
                       <p class="text-xl font-semibold">Chuyến bay - VIETJET AIR (VJ)2214</p>
                       <p class="text-xl font-semibold">20/11/2025 - 20/11/2025</p>
                     </div>
@@ -311,8 +313,8 @@
                   </p>
                 </div>
                 <div class="py-4 px-6 border-b border-[#B3B0D8]">
-                  <div class="grid grid-cols-3 gap-5 items-end">
-                    <div class="flex flex-col gap-2">
+                  <div class="grid grid-cols-3  max-md:grid-cols-4  gap-5 items-end">
+                    <div class="flex flex-col gap-2 max-md:col-span-4">
                       <div class="flex gap-2 items-center">
                         <div>
                           <img src="./airline/VietJetAir.svg" alt="" class="w-14 h-14" />
@@ -321,7 +323,7 @@
                       </div>
                       <p>Số hiệu CB: <span class="text-xl font-semibold">VJ2214</span></p>
                     </div>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 max-md:col-span-2 max-sm:col-span-4 ">
                       <p>Khởi hành</p>
                       <div>
                         <div class="flex gap-2">
@@ -344,8 +346,8 @@
                         <p>Noi Bai Intl Arpt</p>
                       </div>
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <p>Khởi hành</p>
+                    <div class="flex flex-col gap-2 max-md:col-span-2 max-sm:col-span-4 ">
+                      <p>Điểm đến</p>
                       <div>
                         <div class="flex gap-2">
                           <div>
@@ -369,18 +371,20 @@
                     </div>
                   </div>
 
-                  <div class="grid grid-cols-3 gap-5 mt-7">
+                  <div class="grid grid-cols-3 gap-5 mt-7 max-sm:grid-cols-1">
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Số hiệu hãng: <span class="text-xl font-semibold">VJVNHN</span></p>
                       <p class="min-h-7">Trạng thái vé: <span class="text-xl font-semibold">Đã xác nhận</span></p>
                       <p class="min-h-7">Thời gian bay: <span class="text-xl font-semibold">01giờ 45 phút</span></p>
                     </div>
+                    <div class=" hidden max-sm:block border-b border-amber-200"></div>
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Ha Noi, VN</p>
                       <p class="min-h-7">Terminal 1</p>
                       <p class="text-4xl font-semibold">14:30</p>
                       <p class="min-h-7">Thứ 6, 20/11/2025</p>
                     </div>
+                    <div class=" hidden max-sm:block border-b border-amber-200"></div>
                     <div class="flex flex-col gap-2">
                       <p class="min-h-7">Ho Chi Minh, VN</p>
                       <p class="min-h-7">Terminal 1</p>
@@ -389,8 +393,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="py-4 px-6 grid grid-cols-3 gap-5">
-                  <div class="col-span-1 flex gap-2">
+                <div class="py-4 px-6 grid grid-cols-5 max-md:grid-cols-1 gap-5">
+                  <div class="col-span-2 flex gap-2">
                     <div class="min-w-8">
                       <img src="./flight-payment/bag.svg" alt="" />
                     </div>
@@ -418,7 +422,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-span-2 flex gap-2">
+                  <div class="col-span-3 flex gap-2">
                     <div class="min-w-8 h-8">
                       <img src="./flight-payment/ticket.svg" alt="" />
                     </div>
@@ -490,7 +494,7 @@
             </div>
           </div>
           <!-- CHI TIÊT -->
-          <div class="filter rounded-xl col-span-1 shadow-[0_0_18px_rgba(0,0,0,0.15)]">
+          <div class="filter rounded-xl col-span-1 shadow-[0_0_18px_rgba(0,0,0,0.15)] max-lg:col-span-3">
             <div class="p-4 bg-[#F8F9FB] font-bold">
               <p class="text-xs text-[#00ABC0] mb-1">THANH TOÁN TRỰC TUYẾN</p>
               <p class="text-sm">Trạng thái: Chưa thanh toán</p>
@@ -507,7 +511,7 @@
               </div>
               <!-- // -->
 
-              <div class="h-[145px]">
+              <div class="h-[145px] w-full flex items-center justify-center">
                 <img src="./flight-payment/QR.png" alt="" class="h-full" />
               </div>
               <div>

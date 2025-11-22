@@ -2,9 +2,14 @@
   <div class="bg-primary text-white rounded-2xl p-4 shadow-lg">
     <form class="w-full" method="post">
       <input type="text" class="hidden" id="departure-point-value" name="departure_point" value="HAN" />
+      <!-- Điểm đi -->
       <input type="text" class="hidden" id="arrival-point-value" name="arrival_point" value="SGN" />
+      <!-- Điểm đến -->
       <input type="text" class="hidden" id="departure-date-value" name="departure_date" />
+      <!-- Ngày đi -->
       <input type="text" class="hidden" id="return-date-value" name="return_date" />
+      <!-- Ngày về -->
+
       <div class="flex flex-wrap items-center gap-5 max-xl:justify-between">
         <div class="flex gap-5">
           <label class="inline-flex items-center gap-2 cursor-pointer">
@@ -16,11 +21,73 @@
             <span class="text-sm">Khứ hồi</span>
           </label>
         </div>
-        <button type="button" class="flex gap-2">
-          <img src="./search/member.svg" alt="Icon member" />
-          <span>Số lượng hành khách</span>
-          <img src="./search/drop-dow.svg" alt="Icon member" />
-        </button>
+        <div type="button" class="relative cursor-pointer">
+          <div class="flex gap-2" id="person-input">
+            <img src="./search/member.svg" alt="Icon member" />
+            <span id="render-person">Số lượng hành khách</span>
+            <img src="./search/drop-dow.svg" alt="Icon member" />
+          </div>
+          <!-- START QUANTITY -->
+          <div
+            id="quantity-modal"
+            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px]  p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw]   left-0 z-9999 text-text-primary"
+          >
+            <div class="flex gap-2 items-center">
+              <img src="./search/user-plus.svg" alt="" />
+              <p class="font-semibold">Số lượng hành khách</p>
+            </div>
+            <div>
+              <div
+                data-type="adult-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
+              >
+                <p>Người lớn</p>
+                <div class="flex gap-5">
+                  <div class="minus-button">
+                    <img src="./search/minus.svg" alt="" />
+                  </div>
+                  <input type="text" class="max-w-3 outline-none" name="adult_passenger" value="1" />
+                  <div class="plus-button">
+                    <img src="./search/plus.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div
+                data-type="child-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
+              >
+                <p>Trẻ em <span class="ml-2 text-sm text-[#B3B0D8]">2-11</span></p>
+                <div class="flex gap-5">
+                  <div class="minus-button">
+                    <img src="./search/minus.svg" alt="" />
+                  </div>
+                  <input type="text" class="max-w-3 outline-none" name="child_passenger" value="0" />
+                  <div class="plus-button">
+                    <img src="./search/plus.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div data-type="infant-passenger-value" class="person-input-change flex justify-between py-5">
+                <p>Em bé<span class="ml-2 text-sm text-[#B3B0D8]">Dưới 2</span></p>
+                <div class="flex gap-5">
+                  <div class="minus-button">
+                    <img src="./search/minus.svg" alt="" />
+                  </div>
+                  <input type="text" class="max-w-3 outline-none" name="infant_passenger" value="0" />
+                  <div class="plus-button">
+                    <img src="./search/plus.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer" onclick="
+                document.getElementById('quantity-modal').classList.add('hidden');
+              ">Xác nhận</div>
+            </div>
+          </div>
+          <!--END  QUANTITY -->
+        </div>
       </div>
       <div
         class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
@@ -54,7 +121,7 @@
           </div>
         </div>
         <div
-          class=" bg-white rounded-md p-3 flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer"
+          class="bg-white rounded-md p-3 flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer"
           id="departure-date-input"
         >
           <div>
@@ -88,6 +155,7 @@
         </div>
       </div>
     </form>
+
     <!-- LOCATION -->
     <div
       id="location-modal"

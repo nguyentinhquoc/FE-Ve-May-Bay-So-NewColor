@@ -20,192 +20,187 @@
             Giá vé chưa bao gồm thuế và các loại phí khác, quý khách lưu ý chọn chi tiết để xem đầy đủ.
           </p>
         </div>
-        <!-- <div class="font-bold">
-          <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
-          <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
-          <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
-          <a class="text-base p-3 max-md:text-xs">...</a>
-        </div> -->
+       
       </div>
       <div class="content mt-5 mb-[190px]">
-        <div class="grid-cols-4 grid gap-5 items-start">
+        <div class="grid-cols-4 grid gap-5 items-start max-lg:grid-cols-1">
           <div class="flight-list col-span-3">
             <div class="flex flex-col gap-8">
               <!-- //BOX -->
               <div class="flex flex-col gap-5">
-                <div class="shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
-                  <div class="bg-[#CAF0F8] flex items-start justify-between px-4 py-1.5">
+           <div class="plane-items-selected shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
+                <div class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked">
+                  <div>
+                    <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
+                    <p class="text-base">
+                      <span class="max-md:block">Thứ 4, 10 tháng 12</span>
+                      <span class="ml-3 max-md:ml-0 max-md:block ">18:55 - 12:05 (2h 30 m , Bay thẳng)</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé &gt;</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-5 max-lg:grid-cols-2 max-md:block p-4">
+                  <div class="flex flex-col max-lg:col-span-2 gap-4  max-lg:mb-5">
+                    <div class="flex gap-3 items-start">
+                      <div>
+                        <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10">
+                      </div>
+                      <div class="text-sm">
+                        <p class="font-bold">Vietnam Airlines</p>
+                        <p>VN 617 - A321 Ceo</p>
+                      </div>
+                    </div>
+                    <!-- //// -->
+                    <!-- <div class="flex gap-3 items-start">
+                      <div>
+                        <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
+                      </div>
+                      <div class="text-sm">
+                        <p class="font-bold">Vietnam Airlines</p>
+                        <p>EY&nbsp;401 - 787-10</p>
+                        <p>EY&nbsp;63 - A380</p>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="flex col-span-2 max-lg:col-span-1   gap-2 items-start justify-center max-md:justify-start  max-md:mb-5">
                     <div>
-                      <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
-                      <p class="text-base">
-                        <span>Thứ 4, 10 tháng 12 </span>
-                        <span class="ml-3">18:55 - 12:05 (2h 30 m , Bay thẳng)</span>
-                      </p>
+                      <img src="./flight-info/plane-start.svg" alt="">
                     </div>
                     <div>
-                      <p class="text-sm font-bold">Điều kiện vé &gt;</p>
+                      <div class="font-bold text-2xl">
+                        <p>HAN - Nội Bài</p>
+                        <p>Sân bay Quốc tế</p>
+                      </div>
+                      <p class="text-base">Thứ 4, 10/12/2025 - 18:55</p>
                     </div>
                   </div>
-                  <div class="grid grid-cols-5 p-4">
-                    <div class="flex flex-col gap-4">
-                      <div class="flex gap-3 items-start">
-                        <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
-                        </div>
-                        <div class="text-sm">
-                          <p class="font-bold">Vietnam Airlines</p>
-                          <p>VN 617 - A321 Ceo</p>
-                        </div>
-                      </div>
-                      <!-- //// -->
-                      <div class="flex gap-3 items-start">
-                        <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
-                        </div>
-                        <div class="text-sm">
-                          <p class="font-bold">Vietnam Airlines</p>
-                          <p>EY&nbsp;401 - 787-10</p>
-                          <p>EY&nbsp;63 - A380</p>
-                        </div>
-                      </div>
+                  <div class="flex col-span-2 max-lg:col-span-1   gap-2 items-start justify-center max-md:justify-start">
+                    <div>
+                      <img src="./flight-info/plane-start.svg" alt="">
                     </div>
-                    <div class="flex col-span-2 gap-2 items-start justify-center">
-                      <div>
-                        <img src="./flight-info/plane-start.svg" alt="" />
+                    <div>
+                      <div class="font-bold text-2xl">
+                        <p>LHR - London Heathrow</p>
+                        <p>Sân bay Quốc tế</p>
                       </div>
-                      <div>
-                        <div class="font-bold text-2xl">
-                          <p>HAN - Nội Bài</p>
-                          <p>Sân bay Quốc tế</p>
-                        </div>
-                        <p class="text-base">Thứ 4, 10/12/2025 - 18:55</p>
-                      </div>
-                    </div>
-                    <div class="flex col-span-2 gap-2 items-start justify-center">
-                      <div>
-                        <img src="./flight-info/plane-start.svg" alt="" />
-                      </div>
-                      <div>
-                        <div class="font-bold text-2xl">
-                          <p>LHR - London Heathrow</p>
-                          <p>Sân bay Quốc tế</p>
-                        </div>
-                        <p class="text-base">Thứ 5, 11/12/2025 - 12:05</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10">
-                    <div class="flex gap-1.5">
-                      <div><img src="./flight-info/bag.svg" alt="" /></div>
-                      <div>
-                        <p class="text-base">Thông tin hành lý</p>
-                        <ul class="my-1 text-sm">
-                          <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
-                        </ul>
-                        <p class="text-[#878C93] text-sm">( Tổng hành lý đã bao gồm trong giá )</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-1.5">
-                      <div><img src="./flight-info/ticket.svg" alt="" /></div>
-                      <div>
-                        <p class="text-base">Điều kiện vé</p>
-                        <ul class="my-1 text-sm">
-                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu  có).</li>
-                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
-                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
-                        </ul>
-                        <p class="text-[#878C93] text-sm">Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.</p>
-                      </div>
+                      <p class="text-base">Thứ 5, 11/12/2025 - 12:05</p>
                     </div>
                   </div>
                 </div>
+                <div class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 conditions hidden">
+                  <div class="flex gap-1.5">
+                    <div><img src="./flight-info/bag.svg" alt=""></div>
+                    <div>
+                      <p class="text-base">Thông tin hành lý</p>
+                      <ul class="my-1 text-sm">
+                        <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
+                      </ul>
+                      <p class="text-[#878C93] text-sm">( Tổng hành lý đã bao gồm trong giá )</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-1.5">
+                    <div><img src="./flight-info/ticket.svg" alt=""></div>
+                    <div>
+                      <p class="text-base">Điều kiện vé</p>
+                      <ul class="my-1 text-sm">
+                        <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu&nbsp; có).</li>
+                        <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
+                        <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
+                      </ul>
+                      <p class="text-[#878C93] text-sm">Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 <!-- //-->
-                <div class="shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
-                  <div class="bg-[#CAF0F8] flex items-start justify-between px-4 py-1.5">
+              <div class="plane-items-selected shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
+                <div class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked">
+                  <div>
+                    <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
+                    <p class="text-base">
+                      <span class="max-md:block">Thứ 4, 10 tháng 12</span>
+                      <span class="ml-3 max-md:ml-0 max-md:block ">18:55 - 12:05 (2h 30 m , Bay thẳng)</span>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé &gt;</p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-5 max-lg:grid-cols-2 max-md:block p-4">
+                  <div class="flex flex-col max-lg:col-span-2 gap-4  max-lg:mb-5">
+                    <div class="flex gap-3 items-start">
+                      <div>
+                        <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10">
+                      </div>
+                      <div class="text-sm">
+                        <p class="font-bold">Vietnam Airlines</p>
+                        <p>VN 617 - A321 Ceo</p>
+                      </div>
+                    </div>
+                    <!-- //// -->
+                    <!-- <div class="flex gap-3 items-start">
+                      <div>
+                        <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
+                      </div>
+                      <div class="text-sm">
+                        <p class="font-bold">Vietnam Airlines</p>
+                        <p>EY&nbsp;401 - 787-10</p>
+                        <p>EY&nbsp;63 - A380</p>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="flex col-span-2 max-lg:col-span-1   gap-2 items-start justify-center max-md:justify-start  max-md:mb-5">
                     <div>
-                      <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
-                      <p class="text-base">
-                        <span>Thứ 4, 10 tháng 12 </span>
-                        <span class="ml-3">18:55 - 12:05 (2h 30 m , Bay thẳng)</span>
-                      </p>
+                      <img src="./flight-info/plane-start.svg" alt="">
                     </div>
                     <div>
-                      <p class="text-sm font-bold">Điều kiện vé &gt;</p>
+                      <div class="font-bold text-2xl">
+                        <p>HAN - Nội Bài</p>
+                        <p>Sân bay Quốc tế</p>
+                      </div>
+                      <p class="text-base">Thứ 4, 10/12/2025 - 18:55</p>
                     </div>
                   </div>
-                  <div class="grid grid-cols-5 p-4">
-                    <div class="flex flex-col gap-4">
-                      <div class="flex gap-3 items-start">
-                        <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
-                        </div>
-                        <div class="text-sm">
-                          <p class="font-bold">Vietnam Airlines</p>
-                          <p>VN 617 - A321 Ceo</p>
-                        </div>
-                      </div>
-                      <!-- //// -->
-                      <div class="flex gap-3 items-start">
-                        <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt="" class="w-10" />
-                        </div>
-                        <div class="text-sm">
-                          <p class="font-bold">Vietnam Airlines</p>
-                          <p>EY&nbsp;401 - 787-10</p>
-                          <p>EY&nbsp;63 - A380</p>
-                        </div>
-                      </div>
+                  <div class="flex col-span-2 max-lg:col-span-1   gap-2 items-start justify-center max-md:justify-start">
+                    <div>
+                      <img src="./flight-info/plane-start.svg" alt="">
                     </div>
-                    <div class="flex col-span-2 gap-2 items-start justify-center">
-                      <div>
-                        <img src="./flight-info/plane-start.svg" alt="" />
+                    <div>
+                      <div class="font-bold text-2xl">
+                        <p>LHR - London Heathrow</p>
+                        <p>Sân bay Quốc tế</p>
                       </div>
-                      <div>
-                        <div class="font-bold text-2xl">
-                          <p>HAN - Nội Bài</p>
-                          <p>Sân bay Quốc tế</p>
-                        </div>
-                        <p class="text-base">Thứ 4, 10/12/2025 - 18:55</p>
-                      </div>
-                    </div>
-                    <div class="flex col-span-2 gap-2 items-start justify-center">
-                      <div>
-                        <img src="./flight-info/plane-start.svg" alt="" />
-                      </div>
-                      <div>
-                        <div class="font-bold text-2xl">
-                          <p>LHR - London Heathrow</p>
-                          <p>Sân bay Quốc tế</p>
-                        </div>
-                        <p class="text-base">Thứ 5, 11/12/2025 - 12:05</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10">
-                    <div class="flex gap-1.5">
-                      <div><img src="./flight-info/bag.svg" alt="" /></div>
-                      <div>
-                        <p class="text-base">Thông tin hành lý</p>
-                        <ul class="my-1 text-sm">
-                          <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
-                        </ul>
-                        <p class="text-[#878C93] text-sm">( Tổng hành lý đã bao gồm trong giá )</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-1.5">
-                      <div><img src="./flight-info/ticket.svg" alt="" /></div>
-                      <div>
-                        <p class="text-base">Điều kiện vé</p>
-                        <ul class="my-1 text-sm">
-                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu  có).</li>
-                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
-                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
-                        </ul>
-                        <p class="text-[#878C93] text-sm">Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.</p>
-                      </div>
+                      <p class="text-base">Thứ 5, 11/12/2025 - 12:05</p>
                     </div>
                   </div>
                 </div>
+                <div class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 conditions hidden">
+                  <div class="flex gap-1.5">
+                    <div><img src="./flight-info/bag.svg" alt=""></div>
+                    <div>
+                      <p class="text-base">Thông tin hành lý</p>
+                      <ul class="my-1 text-sm">
+                        <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
+                      </ul>
+                      <p class="text-[#878C93] text-sm">( Tổng hành lý đã bao gồm trong giá )</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-1.5">
+                    <div><img src="./flight-info/ticket.svg" alt=""></div>
+                    <div>
+                      <p class="text-base">Điều kiện vé</p>
+                      <ul class="my-1 text-sm">
+                        <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu&nbsp; có).</li>
+                        <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
+                        <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
+                      </ul>
+                      <p class="text-[#878C93] text-sm">Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               </div>
               <!-- //END BOX -->
               <!-- //Start BOX -->
@@ -213,7 +208,7 @@
                 <div class="mb-3">
                   <h2 class="font-bold text-2xl">Chọn Hành lý</h2>
                 </div>
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-6">
                   <div class="flex flex-col gap-4">
                     <div>
                       <p class="font-bold text-accent">Hành lý ký gửi chiều về:</p>
@@ -304,7 +299,7 @@
                 <div class="mb-3">
                   <h2 class="font-bold text-2xl">Chọn xuất ăn</h2>
                 </div>
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-6">
                   <div class="flex flex-col gap-4">
                     <div>
                       <p class="font-bold text-accent">Suất ăn chiều đi:</p>
@@ -486,7 +481,7 @@
           </div>
 
           <!-- CHI TIÊT -->
-          <div class="filter box-sha rounded-xl col-span-1 shadow-[0_0_18px_rgba(0,0,0,0.15)]">
+          <div class="filter box-sha rounded-xl col-span-1 shadow-[0_0_18px_rgba(0,0,0,0.15)]  max-lg:col-span-3">
             <!-- // -->
             <div class="head flex justify-between items-center mb-2 px-3.5 py-2">
               <p class="text-base font-bold">CHI TIẾT GIÁ</p>
@@ -680,9 +675,9 @@
             <!-- // -->
             <div class="bg-bg-info p-3.5">
               <label
-                class="border rounded-xl inline-block bg-white border-[#B3B0D8] px-7 py-3 font-bold cursor-pointer"
+                class="border rounded-xl inline-block bg-white border-[#B3B0D8] px-7 py-3 font-bold cursor-pointer flex items-center flex-col"
               >
-                Mã Khuyến mại:
+               <p> Mã Khuyến mại:</p>
                 <input type="text" class="outline-none uppercase" placeholder="Ví dụ: VMBSALE100" />
               </label>
             </div>
@@ -713,7 +708,13 @@
         </div>
       </div>
     </section>
-
+   <script> 
+   const planeItemsSelected = document.querySelectorAll(".plane-items-selected");
+      planeItemsSelected.forEach((planeItemSelected) => {
+        planeItemSelected.querySelector(".clicked").addEventListener("click", () => {
+          planeItemSelected.querySelector(".conditions").classList.toggle("hidden");
+        });
+      });</script>
     <%- include("layout/footer.ejs") %>
   </body>
 </html>

@@ -43,7 +43,33 @@
   </div>
 </header>
  <section class="container mx-auto mt-7.5 relative">
-  <div class="bg-primary text-white rounded-2xl p-4 shadow-lg">
+  <div class="bg-[#CAF0F8] rounded-t-xl max-xl:hidden">
+    <ul class="flex gap-2 justify-start items-center">
+      <li>
+        <a href="#" class="text-xl text-accent p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vemaybay.svg" alt="">
+          Vé máy bay</a>
+      </li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khachsan.svg" alt="">
+          Khách sạn</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tour.svg" alt="">
+          Tour</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vecongvien.svg" alt="">
+          Vé công viên</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khampha.svg" alt="">
+          Khám phá</a></li>
+      <li>
+        <a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tracuu.svg" alt="">
+          Tra cứu vé</a>
+      </li>
+    </ul>
+  </div>
+  <div class="bg-primary text-white p-4 shadow-lg">
     <form class="w-full" method="post">
       <input type="text" class="hidden" id="departure-point-value" name="departure_point" value="HAN" />
       <!-- Điểm đi -->
@@ -53,7 +79,6 @@
       <!-- Ngày đi -->
       <input type="text" class="hidden" id="return-date-value" name="return_date" />
       <!-- Ngày về -->
-
       <div class="flex flex-wrap items-center gap-5 max-xl:justify-between">
         <div class="flex gap-5">
           <label class="inline-flex items-center gap-2 cursor-pointer">
@@ -72,19 +97,15 @@
             <img src="./search/drop-dow.svg" alt="Icon member" />
           </div>
           <!-- START QUANTITY -->
-          <div
-            id="quantity-modal"
-            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px]  p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw]   left-0 z-9999 text-text-primary"
-          >
+          <div id="quantity-modal"
+            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw] left-0 z-9999 text-text-primary">
             <div class="flex gap-2 items-center">
               <img src="./search/user-plus.svg" alt="" />
               <p class="font-semibold">Số lượng hành khách</p>
             </div>
             <div>
-              <div
-                data-type="adult-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
-              >
+              <div data-type="adult-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Người lớn</p>
                 <div class="flex gap-5">
                   <div class="minus-button">
@@ -96,10 +117,8 @@
                   </div>
                 </div>
               </div>
-              <div
-                data-type="child-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
-              >
+              <div data-type="child-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Trẻ em <span class="ml-2 text-sm text-[#B3B0D8]">2-11</span></p>
                 <div class="flex gap-5">
                   <div class="minus-button">
@@ -125,22 +144,21 @@
               </div>
             </div>
             <div>
-              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer" onclick="
+              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer"
+                onclick="
                 document.getElementById('quantity-modal').classList.add('hidden');
-              ">Xác nhận</div>
+              ">
+                Xác nhận
+              </div>
             </div>
           </div>
           <!--END  QUANTITY -->
         </div>
       </div>
-      <div
-        class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
-        id="form-search-input"
-      >
-        <div
-          class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer"
-          id="departure-point-input"
-        >
+      <div class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
+        id="form-search-input">
+        <div class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer"
+          id="departure-point-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/plane-start.svg" alt="icon plane" />
@@ -166,8 +184,7 @@
         </div>
         <div
           class="bg-white rounded-md p-3 flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer"
-          id="departure-date-input"
-        >
+          id="departure-date-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane" />
@@ -179,10 +196,8 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
           </div>
         </div>
-        <div
-          class="bg-white rounded-md p-3 flex justify-between items-center hidden cursor-pointer"
-          id="return-date-input"
-        >
+        <div class="bg-white rounded-md p-3 flex justify-between items-center hidden cursor-pointer"
+          id="return-date-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane" />
@@ -199,12 +214,9 @@
         </div>
       </div>
     </form>
-
     <!-- LOCATION -->
-    <div
-      id="location-modal"
-      class="hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-text-primary"
-    >
+    <div id="location-modal"
+      class="hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-text-primary">
       <div>
         <p class="text-2xl font-bold">Nhập Mã Sân bay hoặc Tên Thành phố</p>
       </div>
@@ -236,144 +248,104 @@
       </div>
       <div class="shadow-[0px_8px_30px_rgba(0,0,0,0.15)] py-6 px-9 rounded-xl">
         <p class="text-accent text-2xl mb-7">Nội địa - Sân bay tại Việt Nam</p>
-        <div class="grid grid-cols-3 gap-8">
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+        <div class="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2">
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HAN</p>
             <p class="text-xl name">Hà Nội</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">SGN</p>
             <p class="text-xl name">Hồ Chí Minh</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DAD</p>
             <p class="text-xl name">Đà Nẵng</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HPH</p>
             <p class="text-xl name">Hải Phòng</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">THD</p>
             <p class="text-xl name">Thanh Hóa</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VCA</p>
             <p class="text-xl name">Cần Thơ</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VII</p>
             <p class="text-xl name">Vinh</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VDH</p>
             <p class="text-xl name">Quảng Bình</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">CXR</p>
             <p class="text-xl name">Nha Trang</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DLI</p>
             <p class="text-xl name">Đà Lạt</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">PXU</p>
             <p class="text-xl name">Pleiku</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">TBB</p>
             <p class="text-xl name">Phú Yên</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">BMV</p>
             <p class="text-xl name">Ban Mê Thuột</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VKG</p>
             <p class="text-xl name">Kiên Giang</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DIN</p>
             <p class="text-xl name">Điện Biên</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VDO</p>
             <p class="text-xl name">Vân Đồn</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">UIH</p>
             <p class="text-xl name">Quy Nhơn</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HUI</p>
             <p class="text-xl name">Huế</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chaua"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="chaua">
             <p class="font-bold text-[32px] uppercase code">PQC</p>
             <p class="text-xl name">Phú Quốc</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chauau"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="chauau">
             <p class="font-bold text-[32px] uppercase code">VCS</p>
             <p class="text-xl name">Côn Đảo</p>
           </div>
@@ -383,13 +355,12 @@
     <!-- END LOCATION -->
     <!-- DATE -->
     <div
-      class="hidden calendar-wrapper bg-white text-black flex flex-col gap-6 min-w-[960px] max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999"
-      id="date-modal"
-    >
+      class="hidden calendar-wrapper bg-white text-black flex flex-col gap-6 max-w-[960px] max-xl:w-[93%] max-sm:w-[80%] max-lg:w-[90%] w-fit p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 max-sm:p-3"
+      id="date-modal">
       <div class="calendar-header">
         <div class="mb-4">
-          <p class="text-2xl text-primary">Quý khách vui lòng chọn ngày bay</p>
-          <p class="text-sm text-[#00ABC0]">
+          <p class="text-2xl text-primary max-sm:text-base">Quý khách vui lòng chọn ngày bay</p>
+          <p class="text-sm text-[#00ABC0] max-sm:text-xs">
             Ngày bay chiều đi phải được chọn trước ngày về. Ngày về chỉ được trùng với ngày bay đi và ngày bay sau
           </p>
         </div>
@@ -402,26 +373,26 @@
             <p class="text-sm">Ngày về</p>
             <p class="text-lg font-bold">29/10/2025</p>
           </div> -->
-          <div class="flex justify-between flex-2 px-5">
+          <div class="flex justify-between flex-2 px-5 max-sm:px-1">
             <div class="flex gap-2 items-center ml-">
-              <div class="p-2.5 bg-primary rounded-4xl"></div>
-              <p>Ngày bay đã chọn</p>
+              <div class="p-2.5 bg-primary rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày bay đã chọn</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-[#00ABC0] rounded-4xl"></div>
-              <p>Ngày hiện tại</p>
+              <div class="p-2.5 bg-[#00ABC0] rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày hiện tại</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-accent rounded-4xl"></div>
-              <p>Ngày lễ</p>
+              <div class="p-2.5 bg-accent rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày lễ</p>
             </div>
           </div>
         </div>
       </div>
       <div class="relative box-calendar">
         <div class="absolute top-0 right-0 left-0 flex justify-between items-center">
-          <button id="prev" class="text-3xl cursor-pointer p-6">&lt;</button>
-          <button id="next" class="text-3xl cursor-pointer p-6">&gt;</button>
+          <button id="prev" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&lt;</button>
+          <button id="next" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&gt;</button>
         </div>
         <div id="calendar"></div>
       </div>
@@ -430,7 +401,6 @@
     <!-- END DATE -->
   </div>
 </section>
-
     <section class="container mx-auto mt-8">
       <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
         <div>

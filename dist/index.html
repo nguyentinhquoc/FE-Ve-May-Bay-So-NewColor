@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body class="text-text-primary">
   <header>
   <div class="mt-7.5 container mx-auto flex justify-between items-center">
@@ -44,8 +46,34 @@
   </div>
 </header>
 
-  <section class="container mx-auto mt-7.5 relative">
-  <div class="bg-primary text-white rounded-2xl p-4 shadow-lg">
+    <section class="container mx-auto mt-7.5 relative">
+  <div class="bg-[#CAF0F8] rounded-t-xl max-xl:hidden">
+    <ul class="flex gap-2 justify-start items-center">
+      <li>
+        <a href="#" class="text-xl text-accent p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vemaybay.svg" alt="">
+          Vé máy bay</a>
+      </li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khachsan.svg" alt="">
+          Khách sạn</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tour.svg" alt="">
+          Tour</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vecongvien.svg" alt="">
+          Vé công viên</a></li>
+      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khampha.svg" alt="">
+          Khám phá</a></li>
+      <li>
+        <a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tracuu.svg" alt="">
+          Tra cứu vé</a>
+      </li>
+    </ul>
+  </div>
+  <div class="bg-primary text-white p-4 shadow-lg">
     <form class="w-full" method="post">
       <input type="text" class="hidden" id="departure-point-value" name="departure_point" value="HAN" />
       <!-- Điểm đi -->
@@ -55,7 +83,6 @@
       <!-- Ngày đi -->
       <input type="text" class="hidden" id="return-date-value" name="return_date" />
       <!-- Ngày về -->
-
       <div class="flex flex-wrap items-center gap-5 max-xl:justify-between">
         <div class="flex gap-5">
           <label class="inline-flex items-center gap-2 cursor-pointer">
@@ -74,19 +101,15 @@
             <img src="./search/drop-dow.svg" alt="Icon member" />
           </div>
           <!-- START QUANTITY -->
-          <div
-            id="quantity-modal"
-            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px]  p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw]   left-0 z-9999 text-text-primary"
-          >
+          <div id="quantity-modal"
+            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw] left-0 z-9999 text-text-primary">
             <div class="flex gap-2 items-center">
               <img src="./search/user-plus.svg" alt="" />
               <p class="font-semibold">Số lượng hành khách</p>
             </div>
             <div>
-              <div
-                data-type="adult-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
-              >
+              <div data-type="adult-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Người lớn</p>
                 <div class="flex gap-5">
                   <div class="minus-button">
@@ -98,10 +121,8 @@
                   </div>
                 </div>
               </div>
-              <div
-                data-type="child-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5"
-              >
+              <div data-type="child-passenger-value"
+                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Trẻ em <span class="ml-2 text-sm text-[#B3B0D8]">2-11</span></p>
                 <div class="flex gap-5">
                   <div class="minus-button">
@@ -127,22 +148,21 @@
               </div>
             </div>
             <div>
-              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer" onclick="
+              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer"
+                onclick="
                 document.getElementById('quantity-modal').classList.add('hidden');
-              ">Xác nhận</div>
+              ">
+                Xác nhận
+              </div>
             </div>
           </div>
           <!--END  QUANTITY -->
         </div>
       </div>
-      <div
-        class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
-        id="form-search-input"
-      >
-        <div
-          class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer"
-          id="departure-point-input"
-        >
+      <div class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
+        id="form-search-input">
+        <div class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer"
+          id="departure-point-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/plane-start.svg" alt="icon plane" />
@@ -168,8 +188,7 @@
         </div>
         <div
           class="bg-white rounded-md p-3 flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer"
-          id="departure-date-input"
-        >
+          id="departure-date-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane" />
@@ -181,10 +200,8 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
           </div>
         </div>
-        <div
-          class="bg-white rounded-md p-3 flex justify-between items-center hidden cursor-pointer"
-          id="return-date-input"
-        >
+        <div class="bg-white rounded-md p-3 flex justify-between items-center hidden cursor-pointer"
+          id="return-date-input">
           <div>
             <div class="flex gap-2">
               <img src="./search/calender.svg" alt="icon plane" />
@@ -201,12 +218,9 @@
         </div>
       </div>
     </form>
-
     <!-- LOCATION -->
-    <div
-      id="location-modal"
-      class="hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-text-primary"
-    >
+    <div id="location-modal"
+      class="hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-text-primary">
       <div>
         <p class="text-2xl font-bold">Nhập Mã Sân bay hoặc Tên Thành phố</p>
       </div>
@@ -238,144 +252,104 @@
       </div>
       <div class="shadow-[0px_8px_30px_rgba(0,0,0,0.15)] py-6 px-9 rounded-xl">
         <p class="text-accent text-2xl mb-7">Nội địa - Sân bay tại Việt Nam</p>
-        <div class="grid grid-cols-3 gap-8">
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+        <div class="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2">
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HAN</p>
             <p class="text-xl name">Hà Nội</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">SGN</p>
             <p class="text-xl name">Hồ Chí Minh</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DAD</p>
             <p class="text-xl name">Đà Nẵng</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HPH</p>
             <p class="text-xl name">Hải Phòng</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">THD</p>
             <p class="text-xl name">Thanh Hóa</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VCA</p>
             <p class="text-xl name">Cần Thơ</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VII</p>
             <p class="text-xl name">Vinh</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VDH</p>
             <p class="text-xl name">Quảng Bình</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">CXR</p>
             <p class="text-xl name">Nha Trang</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DLI</p>
             <p class="text-xl name">Đà Lạt</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">PXU</p>
             <p class="text-xl name">Pleiku</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">TBB</p>
             <p class="text-xl name">Phú Yên</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">BMV</p>
             <p class="text-xl name">Ban Mê Thuột</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VKG</p>
             <p class="text-xl name">Kiên Giang</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">DIN</p>
             <p class="text-xl name">Điện Biên</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">VDO</p>
             <p class="text-xl name">Vân Đồn</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">UIH</p>
             <p class="text-xl name">Quy Nhơn</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="vietnam">
             <p class="font-bold text-[32px] uppercase code">HUI</p>
             <p class="text-xl name">Huế</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chaua"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="chaua">
             <p class="font-bold text-[32px] uppercase code">PQC</p>
             <p class="text-xl name">Phú Quốc</p>
           </div>
-          <div
-            class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chauau"
-          >
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
+            data-cityType="chauau">
             <p class="font-bold text-[32px] uppercase code">VCS</p>
             <p class="text-xl name">Côn Đảo</p>
           </div>
@@ -385,13 +359,12 @@
     <!-- END LOCATION -->
     <!-- DATE -->
     <div
-      class="hidden calendar-wrapper bg-white text-black flex flex-col gap-6 min-w-[960px] max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999"
-      id="date-modal"
-    >
+      class="hidden calendar-wrapper bg-white text-black flex flex-col gap-6 max-w-[960px] max-xl:w-[93%] max-sm:w-[80%] max-lg:w-[90%] w-fit p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 max-sm:p-3"
+      id="date-modal">
       <div class="calendar-header">
         <div class="mb-4">
-          <p class="text-2xl text-primary">Quý khách vui lòng chọn ngày bay</p>
-          <p class="text-sm text-[#00ABC0]">
+          <p class="text-2xl text-primary max-sm:text-base">Quý khách vui lòng chọn ngày bay</p>
+          <p class="text-sm text-[#00ABC0] max-sm:text-xs">
             Ngày bay chiều đi phải được chọn trước ngày về. Ngày về chỉ được trùng với ngày bay đi và ngày bay sau
           </p>
         </div>
@@ -404,26 +377,26 @@
             <p class="text-sm">Ngày về</p>
             <p class="text-lg font-bold">29/10/2025</p>
           </div> -->
-          <div class="flex justify-between flex-2 px-5">
+          <div class="flex justify-between flex-2 px-5 max-sm:px-1">
             <div class="flex gap-2 items-center ml-">
-              <div class="p-2.5 bg-primary rounded-4xl"></div>
-              <p>Ngày bay đã chọn</p>
+              <div class="p-2.5 bg-primary rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày bay đã chọn</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-[#00ABC0] rounded-4xl"></div>
-              <p>Ngày hiện tại</p>
+              <div class="p-2.5 bg-[#00ABC0] rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày hiện tại</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-accent rounded-4xl"></div>
-              <p>Ngày lễ</p>
+              <div class="p-2.5 bg-accent rounded-4xl max-sm:p-1"></div>
+              <p class="max-sm:text-xs">Ngày lễ</p>
             </div>
           </div>
         </div>
       </div>
       <div class="relative box-calendar">
         <div class="absolute top-0 right-0 left-0 flex justify-between items-center">
-          <button id="prev" class="text-3xl cursor-pointer p-6">&lt;</button>
-          <button id="next" class="text-3xl cursor-pointer p-6">&gt;</button>
+          <button id="prev" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&lt;</button>
+          <button id="next" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&gt;</button>
         </div>
         <div id="calendar"></div>
       </div>
@@ -432,123 +405,135 @@
     <!-- END DATE -->
   </div>
 </section>
-
-  <section class="container overflow-hidden mx-auto mt-12 h-100">
-    <div class="relative">
-      <div id="slider" class="relative">
-        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:block;">
-          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&q=80&w=2070" alt="">
-          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
-          <div class="absolute left-11 bottom-14">
-            <p class=" text-4xl font-bold">Khám phá đảo ngọc</p>
-            <p class=" font-bold text-[40px]">Phú Quốc</p>
-            <p class=" text-2xl">Chỉ từ</p>
-            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+      <section class="container overflow-hidden mx-auto mt-12 h-100">
+        <div class="relative">
+          <div id="slider" class="relative">
+            <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:block;">
+              <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]"
+                src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&q=80&w=2070"
+                alt="">
+              <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none"
+                style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+              <div class="absolute left-11 bottom-14">
+                <p class=" text-4xl font-bold">Khám phá đảo ngọc</p>
+                <p class=" font-bold text-[40px]">Phú Quốc</p>
+                <p class=" text-2xl">Chỉ từ</p>
+                <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+              </div>
+            </div>
+            <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
+              <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]"
+                src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                alt="">
+              <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none"
+                style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+              <div class="absolute left-11 bottom-14">
+                <p class=" text-4xl font-bold">Khám phá Hà Nội</p>
+                <p class=" font-bold text-[40px]">Phú Quốc</p>
+                <p class=" text-2xl">Chỉ từ</p>
+                <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+              </div>
+            </div>
+            <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
+              <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]"
+                src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                alt="">
+              <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none"
+                style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
+              <div class="absolute left-11 bottom-14">
+                <p class=" text-4xl font-bold ">Khám phá đảo ngọc</p>
+                <p class=" font-bold text-[40px]">Phú Quốc</p>
+                <p class=" text-2xl">Chỉ từ</p>
+                <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide controls -->
+          <div class="absolute right-10 bottom-8 flex gap-2">
+            <button id="prevSlide"
+              class="cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-20 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
+              <svg width="24" height="24" fill="none">
+                <path d="M15.5 19 9.5 12 15.5 5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" />
+              </svg>
+            </button>
+            <button id="nextSlide"
+              class=" cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-50 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
+              <svg width="24" height="24" fill="none">
+                <path d="M8.5 5 14.5 12 8.5 19" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" />
+              </svg>
+            </button>
+            <div>
+            </div>
+      </section>
+      <section class="container mx-auto mt-8">
+        <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
+          <div>
+            <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
+            <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
+          </div>
+          <div class="font-bold">
+            <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
+            <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
+            <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
+            <a class="text-base p-3 max-md:text-xs">...</a>
           </div>
         </div>
-        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
-          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="">
-          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
-          <div class="absolute left-11 bottom-14">
-            <p class=" text-4xl font-bold">Khám phá Hà Nội</p>
-            <p class=" font-bold text-[40px]">Phú Quốc</p> 
-            <p class=" text-2xl">Chỉ từ</p>
-            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
-          </div>
-        </div>
-        <div class="slide w-full rounded-[10px] flex justify-center h-full relative" style="display:none;">
-          <img class="object-cover object-center w-full max-h-100 min-h-100 rounded-[10px]" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="">
-          <div class="absolute top-0 left-0 w-full h-full rounded-[10px] pointer-events-none" style="background: linear-gradient(90deg, rgba(212,245,255,1) 5%, rgba(212,245,255,0) 43%);"></div>
-          <div class="absolute left-11 bottom-14">
-            <p class=" text-4xl font-bold ">Khám phá đảo ngọc</p>
-            <p class=" font-bold text-[40px]">Phú Quốc</p>
-            <p class=" text-2xl">Chỉ từ</p>
-            <p class="text-accent text-[40px] font-bold">1,600k/pax</p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide controls -->
-      <div class="absolute right-10 bottom-8 flex gap-2">
-        <button id="prevSlide" class="cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-20 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
-          <svg width="24" height="24" fill="none">
-            <path d="M15.5 19 9.5 12 15.5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-          </svg>
-        </button>
-        <button id="nextSlide" class=" cursor-pointer bg-[rgb(135,140,147,0.5)] bg-opacity-50 hover:bg-opacity-30 rounded-[10px] size-[50px] flex items-center justify-center z-10">
-          <svg width="24" height="24" fill="none">
-            <path d="M8.5 5 14.5 12 8.5 19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-          </svg>
-        </button>
-        <div>
-        </div>
-  </section>
-  <section class="container mx-auto mt-8">
-    <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
-      <div>
-        <p class=" text-2xl font-bold">Chuyến bay có giá tốt</p>
-        <p class=" text-base">Tiết kiệm lên đến 200K cho mỗi chuyến bay</p>
-      </div>
-      <div class="font-bold">
-        <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
-        <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
-        <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
-        <a class="text-base p-3 max-md:text-xs">...</a>
-      </div>
-    </div>
-    <div class="content mt-10">
-      <div class="flex gap-10 max-lg:flex-wrap">
-        <div class="w-2/5 max-lg:w-full">
-          <ul class="flex flex-col">
-            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
-              <div>
-                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
-                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
-              </div>
-              <div>
-                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
-              </div>
-            </li>
-            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
-              <div>
-                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
-                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
-              </div>
-              <div>
-                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
-              </div>
-            </li>
-            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
-              <div>
-                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
-                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
-              </div>
-              <div>
-                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
-              </div>
-            </li>
-            <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
-              <div>
-                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
-                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
-              </div>
-              <div>
-                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
-              </div>
-            </li>
-            <li class="py-3.5  flex justify-between">
-              <div>
-                <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
-                <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
-              </div>
-              <div>
-                <div class="text-accent font-bold text-base">2,360,000đ > ></div>
-              </div>
-            </li>
-          </ul>
-          <p class="ml-auto w-fit text-base font-bold"><a href=""> Tìm thêm chuyến bay >></a></p>
-        </div>
-        <div class="w-3/5 flex gap-6 justify-between max-lg:w-full max-sm:flex-wrap">
-          
+        <div class="content mt-10">
+          <div class="flex gap-10 max-lg:flex-wrap">
+            <div class="w-2/5 max-lg:w-full">
+              <ul class="flex flex-col">
+                <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+                  <div>
+                    <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                    <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+                  </div>
+                  <div>
+                    <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+                  </div>
+                </li>
+                <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+                  <div>
+                    <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                    <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+                  </div>
+                  <div>
+                    <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+                  </div>
+                </li>
+                <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+                  <div>
+                    <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                    <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+                  </div>
+                  <div>
+                    <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+                  </div>
+                </li>
+                <li class="py-3.5 border-b-2 border-b-gray-300 flex justify-between">
+                  <div>
+                    <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                    <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+                  </div>
+                  <div>
+                    <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+                  </div>
+                </li>
+                <li class="py-3.5  flex justify-between">
+                  <div>
+                    <p class="font-bold text-base">Hà Nội - Hồ Chí Minh</p>
+                    <p class="text-highlight text-sm">Khởi hành ngày 20/11/2025</p>
+                  </div>
+                  <div>
+                    <div class="text-accent font-bold text-base">2,360,000đ > ></div>
+                  </div>
+                </li>
+              </ul>
+              <p class="ml-auto w-fit text-base font-bold"><a href=""> Tìm thêm chuyến bay >></a></p>
+            </div>
+            <div class="w-3/5 flex gap-6 justify-between max-lg:w-full max-sm:flex-wrap">
+              
 <div class="w-full border border-[#D3D9DC] rounded-xl overflow-hidden relative">
   <span
     class="absolute top-4 left-4 tag py-1 text-white font-bold px-3 bg-accent rounded-xl inline-block"
@@ -600,26 +585,26 @@
 </div>
 
 
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="container mx-auto mt-10">
-    <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
-      <div>
-        <p class=" text-2xl font-bold">Điểm đến hấp dẫn</p>
-        <p class=" text-base">Khám phá trọn vẹn một hành trình</p>
-      </div>
-    <div class="font-bold">
-        <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
-        <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
-        <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
-        <a class="text-base p-3 max-md:text-xs">...</a>
-      </div>
-    </div>
-    <div class="content mt-10">
-      <div class="grid grid-cols-4 gap-6.5 max-sm:grid-cols-1 max-lg:grid-cols-2 ">
-        
+      </section>
+      <section class="container mx-auto mt-10">
+        <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
+          <div>
+            <p class=" text-2xl font-bold">Điểm đến hấp dẫn</p>
+            <p class=" text-base">Khám phá trọn vẹn một hành trình</p>
+          </div>
+          <div class="font-bold">
+            <a class="text-accent text-base max-md:text-xs p-3">Phú Quốc</a>
+            <a class="text-base p-3 max-md:text-xs" href="">Đà Nắng</a>
+            <a class="text-base p-3 max-md:text-xs">Quy Nhớn</a>
+            <a class="text-base p-3 max-md:text-xs">...</a>
+          </div>
+        </div>
+        <div class="content mt-10">
+          <div class="grid grid-cols-4 gap-6.5 max-sm:grid-cols-1 max-lg:grid-cols-2 ">
+            
 <div
   class="w-full min-h-[430px] border border-[#D3D9DC] rounded-xl overflow-hidden shadow-2xl"
 >
@@ -965,135 +950,142 @@
 </div>
 
 
-      </div>
-    </div>
-  </section>
-  <section class="container mx-auto mt-10">
-    <div class="header-section">
-      <p class="text-2xl font-bold">Thông tin hữu ích cho du khách</p>
-      <p class="text-base">Bạn có thể tìm hiểu thủ tục bay, điều kiện vé ở đây</p>
-    </div>
-    <div class="content mt-10">
-      <div class="grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1 gap-6">
-        <div class="p-4 border rounded-xl border-[#D3D9DC]">
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-              <div class="content hidden mt-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, reprehenderit alias modi dolores distinctio, adipisci blanditiis nam harum minus pariatur dolorem architecto hic voluptas! Voluptatem fugit mollitia eligendi aliquid laboriosam? it alias modi dolores distinctio, adipisci blanditiis nam harum minus pariatur dolorem architecto hic voluptas! Voluptatem fugit mollitia eligendi aliquid laboriosam?</p>
+          </div>
+        </div>
+      </section>
+      <section class="container mx-auto mt-10">
+        <div class="header-section">
+          <p class="text-2xl font-bold">Thông tin hữu ích cho du khách</p>
+          <p class="text-base">Bạn có thể tìm hiểu thủ tục bay, điều kiện vé ở đây</p>
+        </div>
+        <div class="content mt-10">
+          <div class="grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1 gap-6">
+            <div class="p-4 border rounded-xl border-[#D3D9DC]">
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                  <div class="content hidden mt-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, reprehenderit alias modi dolores
+                      distinctio, adipisci blanditiis nam harum minus pariatur dolorem architecto hic voluptas!
+                      Voluptatem fugit mollitia eligendi aliquid laboriosam? it alias modi dolores distinctio, adipisci
+                      blanditiis nam harum minus pariatur dolorem architecto hic voluptas! Voluptatem fugit mollitia
+                      eligendi aliquid laboriosam?</p>
+                  </div>
+                </div>
               </div>
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
               </div>
-          </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            <div class="p-4 border rounded-xl border-[#D3D9DC]">
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 py-4.5">
+                <div>
+                  <img src="./question/question1.svg" alt="">
+                </div>
+                <div>
+                  <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
+            <div class="py-28 px-14 border rounded-xl border-[#D3D9DC] max-xl:col-span-2 max-sm:col-span-1">
+              <div class="flex flex-col justify-between h-full min-h-40">
+                <div class="text-center">
+                  <p class="text-2xl font-bold">Câu hỏi chưa phù hợp?</p>
+                </div>
+                <div class="text-center">
+                  <a href=""
+                    class=" inline-block font-bold text-sm border-2 border-primary p-2.5 rounded-2xl mx-auto w-fit">Tôi
+                    cần giải đáp</a>
+                </div>
+                <div class="text-center">
+                  <p class="text-sm  mt-5">Chúng tôi sẽ cố gắng phản hồi sớm. Ngoài ra bạn có thể liên hệ tổng đài
+                    09.19005320</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-         <div class="p-4 border rounded-xl border-[#D3D9DC]">
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
+      </section>
+      <section class="container mx-auto mt-10">
+        <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
+          <div>
+            <p class=" text-2xl font-bold">Tin tức</p>
+            <p class=" text-base">Nắm bắt kịp thời các khám phá mới và thông tin khuyến mại</p>
           </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 border-b border-[#D3D9DC] py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 py-4.5">
-            <div>
-              <img src="./question/question1.svg" alt="">
-            </div>
-            <div>
-              <p class="text-base">Mua vé máy bay khuyến mãi có được hoàn và đổi vé không?</p>
-            </div>
+          <div class="font-bold">
+            <a class="text-accent text-base max-md:text-xs p-3">Khám phá</a>
+            <a class="text-base p-3 max-md:text-xs" href="">Khuyến mại</a>
+            <a class="text-base p-3 max-md:text-xs">Tin tức</a>
+            <a class="text-base p-3 max-md:text-xs">...</a>
           </div>
         </div>
-         <div class="py-28 px-14 border rounded-xl border-[#D3D9DC] max-xl:col-span-2 max-sm:col-span-1">
-            <div class="flex flex-col justify-between h-full min-h-40">
-              <div class="text-center">
-                <p class="text-2xl font-bold">Câu hỏi chưa phù hợp?</p>
-              </div>
-              <div class="text-center">
-                <a href="" class=" inline-block font-bold text-sm border-2 border-primary p-2.5 rounded-2xl mx-auto w-fit">Tôi cần giải đáp</a>
-              </div>
-              <div class="text-center">
-                <p class="text-sm  mt-5">Chúng tôi sẽ cố gắng phản hồi sớm. Ngoài ra bạn có thể liên hệ tổng đài 09.19005320</p>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="container mx-auto mt-10">
-  <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
-      <div>
-        <p class=" text-2xl font-bold">Tin tức</p>
-        <p class=" text-base">Nắm bắt kịp thời các khám phá mới và thông tin khuyến mại</p>
-      </div>
-    <div class="font-bold">
-        <a class="text-accent text-base max-md:text-xs p-3">Khám phá</a>
-        <a class="text-base p-3 max-md:text-xs" href="">Khuyến mại</a>
-        <a class="text-base p-3 max-md:text-xs">Tin tức</a>
-        <a class="text-base p-3 max-md:text-xs">...</a>
-      </div>
-    </div>
-    <div class="content mt-10">
-      <div class="grid grid-cols-3 max-md:grid-cols-1  gap-5">
-        
+        <div class="content mt-10">
+          <div class="grid grid-cols-3 max-md:grid-cols-1  gap-5">
+            
 <div
   class="w-full min-h-50 max-h-50 border border-[#D3D9DC] rounded-xl overflow-hidden"
 >
@@ -1188,51 +1180,51 @@
 </div>
 
 
-      </div>
-      <div class="mt-2">
-        <a href="" class="text-base font-bold ">Xem thêm >></a>
-      </div>
-    </div>
-  </section>
-  <!-- JS SLIDER -->
-  <script>
-    (function() {
-      const slides = document.querySelectorAll('#slider .slide');
-      let current = 0;
-      function showSlide(idx) {
-        slides.forEach((slide, i) => {
-          slide.style.display = i === idx ? 'block' : 'none';
-        });
-      }
-      document.getElementById('prevSlide').addEventListener('click', function() {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      });
-      document.getElementById('nextSlide').addEventListener('click', function() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      });
-      let autoSlide = setInterval(() => {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      }, 3000);
-      // Pause on mouse enter
-      document.getElementById('slider').addEventListener('mouseenter', () => {
-        clearInterval(autoSlide);
-      });
-      // Resume on mouse leave
-      document.getElementById('slider').addEventListener('mouseleave', () => {
-        autoSlide = setInterval(() => {
-          current = (current + 1) % slides.length;
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-base font-bold ">Xem thêm >></a>
+          </div>
+        </div>
+      </section>
+      <!-- JS SLIDER -->
+      <script>
+        (function () {
+          const slides = document.querySelectorAll('#slider .slide');
+          let current = 0;
+          function showSlide(idx) {
+            slides.forEach((slide, i) => {
+              slide.style.display = i === idx ? 'block' : 'none';
+            });
+          }
+          document.getElementById('prevSlide').addEventListener('click', function () {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+          });
+          document.getElementById('nextSlide').addEventListener('click', function () {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+          });
+          let autoSlide = setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+          }, 3000);
+          // Pause on mouse enter
+          document.getElementById('slider').addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+          });
+          // Resume on mouse leave
+          document.getElementById('slider').addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => {
+              current = (current + 1) % slides.length;
+              showSlide(current);
+            }, 4000);
+          });
+          // Initial display
           showSlide(current);
-        }, 4000);
-      });
-      // Initial display
-      showSlide(current);
-    })();
-  </script>
-  
-  <div id="respon" class="fixed top-0 left-0 w-full bg-blue-600 text-white text-center font-black text-lg z-[100000] p-2">
+        })();
+      </script>
+
+      <div id="respon" class="fixed top-0 left-0 w-full bg-blue-600 text-white text-center font-black text-lg z-[100000] p-2">
   <div class="block sm:hidden">SM</div>
   <div class="hidden sm:block md:hidden">MD</div>
   <div class="hidden md:block lg:hidden">LG</div>
@@ -1463,4 +1455,5 @@
 </footer>
 <script src="./js/form_search.js"></script>
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 /* CSS */
 
-
 /* hover effects:
    - dịch thêm sang trái -1rem, lên trên -0.25rem, phóng to 1.05x
    - tăng shadow
@@ -8,18 +7,22 @@
 .card-price:hover,
 .card-price:focus {
   transform: translateX(-1rem) translateY(-0.25rem) scale(1.05);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); /* hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] */
-  outline: none; /* nếu muốn bỏ focus outline */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  /* hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] */
+  outline: none;
+  /* nếu muốn bỏ focus outline */
 }
+
 /* // CALENDER */
 .calendar-wrapper {
   background: #fff;
   border-radius: 12px;
-  padding: 20px 30px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
+
 .calendar-header {
 }
+
 .calendar-header button {
   background: none;
   border: none;
@@ -30,22 +33,26 @@
   border-radius: 6px;
   transition: background 0.2s;
 }
+
 .calendar-header button:hover {
   background: #eaeefc;
 }
-.box-calendar{
+
+.box-calendar {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   padding: 26px 23px;
-
 }
+
 .calendar {
   border-radius: 10px;
   display: flex;
   gap: 30px;
 }
+
 .month {
   flex: 1;
 }
+
 .month-header {
   display: flex;
   justify-content: center;
@@ -56,6 +63,7 @@
   font-size: 20px;
   margin-bottom: 8px;
 }
+
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -63,6 +71,7 @@
   font-size: 20px;
   border-bottom: 1px dashed #878c93;
 }
+
 .days {
   gap: 5px;
   display: grid;
@@ -70,6 +79,7 @@
   text-align: center;
   font-size: 24px;
 }
+
 .weekdays div {
   padding: 8px 0px;
   display: inline-block;
@@ -78,9 +88,11 @@
   color: #02066f;
   font-weight: 600;
 }
+
 .weekdays div:last-child {
   color: #e64b3c;
 }
+
 .days div {
   text-align: end;
   box-sizing: border-box;
@@ -94,29 +106,36 @@
   position: relative;
   margin: 8px 0;
 }
+
+
 .days div span.lunar {
   display: block;
   font-size: 14px;
   line-height: 1;
   text-align: start;
 }
+
 .days div:hover:not(.inactive):not(.disabled) {
   background: #eaeefc;
 }
+
 .days div.inactive {
   color: #c6c6c6;
   cursor: default;
 }
+
 .days div.disabled {
   color: #c6c6c6;
   cursor: not-allowed;
 }
+
 .days div.start,
 .days div.end {
   background: #02066f;
   color: white;
   font-weight: bold;
 }
+
 .days div.range {
   background: #caf0f8;
 }
@@ -132,9 +151,30 @@
   border: 1px solid #ff3c13;
   font-weight: bold;
 }
+
 .selected-range {
   text-align: center;
   margin-top: 16px;
   font-weight: 600;
   color: #00186f;
+}
+
+@media (width < 40rem) {
+  .days div {
+    
+    align-items: center;
+    text-align: end;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    margin: 8px 0;
+    font-size: 11px;
+    height: fit-content;
+  }
+  .days div span.lunar {
+    font-size: 9px;
+  }
 }

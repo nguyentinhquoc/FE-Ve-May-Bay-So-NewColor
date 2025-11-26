@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
   </head>
   <body class="text-text-primary">
-    <%- include("layout/header.ejs") %> <%- include("components/form-search.ejs") %>
+    <%- include("layout/header.ejs") %>
+     <%- include("components/form-search.ejs") %>
     <section class="container mx-auto mt-8">
       <div class="header-section flex justify-between max-lg:flex-wrap gap-4">
         <div>
@@ -35,7 +36,8 @@
               <div class="flex flex-col gap-5">
                 <div class="plane-items-selected shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
                   <div
-                    class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked">
+                    class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked"
+                  >
                     <div>
                       <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
                       <p class="text-base">
@@ -71,7 +73,8 @@
                     </div> -->
                     </div>
                     <div
-                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start max-md:mb-5">
+                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start max-md:mb-5"
+                    >
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -84,7 +87,8 @@
                       </div>
                     </div>
                     <div
-                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start">
+                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start"
+                    >
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -98,7 +102,8 @@
                     </div>
                   </div>
                   <div
-                    class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 hidden conditions">
+                    class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 hidden conditions"
+                  >
                     <div class="flex gap-1.5">
                       <div><img src="./flight-info/bag.svg" alt /></div>
                       <div>
@@ -126,7 +131,8 @@
                 <!-- //-->
                 <div class="plane-items-selected shadow-[0_8px_20px_rgba(0,0,0,0.15)] rounded-xl overflow-hidden">
                   <div
-                    class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked">
+                    class="bg-[#CAF0F8] flex max-lg:flex-wrap items-start justify-between px-4 py-1.5 cursor-pointer select-none clicked"
+                  >
                     <div>
                       <p class="font-bold text-base">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
                       <p class="text-base">
@@ -162,7 +168,8 @@
                     </div> -->
                     </div>
                     <div
-                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start max-md:mb-5">
+                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start max-md:mb-5"
+                    >
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -175,7 +182,8 @@
                       </div>
                     </div>
                     <div
-                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start">
+                      class="flex col-span-2 max-lg:col-span-1 gap-2 items-start justify-center max-md:justify-start"
+                    >
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -189,7 +197,8 @@
                     </div>
                   </div>
                   <div
-                    class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 hidden conditions">
+                    class="border-t border-[#EBA00A] border-dotted py-4 px-10 flex justify-between gap-10 max-md:flex-col max-md:gap-5 hidden conditions"
+                  >
                     <div class="flex gap-1.5">
                       <div><img src="./flight-info/bag.svg" alt /></div>
                       <div>
@@ -253,7 +262,8 @@
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class>
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
@@ -264,15 +274,18 @@
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
                             <li
                               class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
-                              data-value="ÔngVlaues">
+                              data-value="ÔngVlaues"
+                            >
                               Ông
                             </li>
                             <li
                               class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
-                              data-value="Bà">
+                              data-value="Bà"
+                            >
                               Bà
                             </li>
                           </ul>
@@ -311,21 +324,30 @@
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm max-lg:mt-5">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class>
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled value>
+                            <input type="hidden" disabled value />
                           </div>
                           <div class="pl-3 pt-5 pr-0 border-l py-auto border-l-[#D3D9DC]">
-                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow">
+                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
-                          <ul class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
-                            <li class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold" data-value="ÔngVlaues">
+                          <ul
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="ÔngVlaues"
+                            >
                               Ông
                             </li>
-                            <li class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold" data-value="Bà">
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="Bà"
+                            >
                               Bà
                             </li>
                           </ul>
@@ -367,21 +389,31 @@
                     <p class="text-sm font-bold">Trẻ em:</p>
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm">
                       <div class="col-span-2 max-lg:col-span-3">
-                        <label class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                        <label
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class="">
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="">
+                            <input type="hidden" disabled="" value="" />
                           </div>
                           <div class="pl-3 pt-5 pr-0 border-l py-auto border-l-[#D3D9DC]">
-                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow">
+                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
-                          <ul class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
-                            <li class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold" data-value="ÔngVlaues">
+                          <ul
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="ÔngVlaues"
+                            >
                               Trẻ em gái
                             </li>
-                            <li class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold" data-value="Bà">
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="Bà"
+                            >
                               Trẻ em trai
                             </li>
                           </ul>
@@ -422,23 +454,33 @@
                   <div class="flex flex-col gap-2 mt-3">
                     <p class="text-sm font-bold">Em bé:</p>
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm">
-                     <div class="col-span-2 max-lg:col-span-3">
-                        <label class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                      <div class="col-span-2 max-lg:col-span-3">
+                        <label
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class="">
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="">
+                            <input type="hidden" disabled="" value="" />
                           </div>
                           <div class="pl-3 pt-5 pr-0 border-l py-auto border-l-[#D3D9DC]">
-                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow">
+                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
-                          <ul class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
-                            <li class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold" data-value="ÔngVlaues">
-                               Em bé gái
+                          <ul
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="ÔngVlaues"
+                            >
+                              Em bé gái
                             </li>
-                            <li class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold" data-value="Bà">
-                               Em bé trai
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="Bà"
+                            >
+                              Em bé trai
                             </li>
                           </ul>
                         </label>
@@ -504,23 +546,33 @@
                   <div class="flex flex-col gap-2 mt-3">
                     <p class="text-sm font-bold">Người đại diện:</p>
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm">
-                     <div class="col-span-2 max-lg:col-span-3">
-                        <label class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                      <div class="col-span-2 max-lg:col-span-3">
+                        <label
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class="">
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="">
+                            <input type="hidden" disabled="" value="" />
                           </div>
                           <div class="pl-3 pt-5 pr-0 border-l py-auto border-l-[#D3D9DC]">
-                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow">
+                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
-                          <ul class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
-                            <li class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold" data-value="ÔngVlaues">
-                               Ông
+                          <ul
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="ÔngVlaues"
+                            >
+                              Ông
                             </li>
-                            <li class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold" data-value="Bà">
-                               Bà
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="Bà"
+                            >
+                              Bà
                             </li>
                           </ul>
                         </label>
@@ -552,22 +604,32 @@
 
                   <div class="flex flex-col gap-2 mt-3">
                     <div class="grid gap-2 grid-cols-11 max-sm:flex max-sm:flex-col text-sm">
-                     <div class="col-span-2 max-lg:col-span-3">
-                        <label class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none">
+                      <div class="col-span-2 max-lg:col-span-3">
+                        <label
+                          class="pt-1.5 px-3 pb-3.5 w-full border border-[#B3B0D8] rounded-lg w-full relative select-customer-wrapper flex justify-between items-stretch cursor-pointer select-none"
+                        >
                           <div class="">
                             Quý danh: <span class="text-red-500">*</span>
                             <p class="w-full text-render font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="">
+                            <input type="hidden" disabled="" value="" />
                           </div>
                           <div class="pl-3 pt-5 pr-0 border-l py-auto border-l-[#D3D9DC]">
-                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow">
+                            <img src="/search/drop-dow-gray.svg" alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
-                          <ul class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10">
-                            <li class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold" data-value="ÔngVlaues">
+                          <ul
+                            class="hidden select-customer-dropdown absolute top-full left-0 w-full bg-white border border-[#B3B0D8] rounded-lg mt-1 z-10"
+                          >
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option border-b border-[#B3B0D8] hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="ÔngVlaues"
+                            >
                               Đơn vị
                             </li>
-                            <li class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold" data-value="Bà">
+                            <li
+                              class="px-2 pt-1.5 pb-3.5 option hover:bg-gray-400 hover:text-white font-semibold"
+                              data-value="Bà"
+                            >
                               Tổ chức
                             </li>
                           </ul>
@@ -615,7 +677,8 @@
                         class="outline-none w-full"
                         name
                         id
-                        placeholder="Ví dụ: Bay lần đầu, đặt suất ăn, ghế ngồi, Số thẻ thành viên, Passport...Yêu cầu hỗ trợ xe lăn"></textarea>
+                        placeholder="Ví dụ: Bay lần đầu, đặt suất ăn, ghế ngồi, Số thẻ thành viên, Passport...Yêu cầu hỗ trợ xe lăn"
+                      ></textarea>
                     </label>
                     <span class="w-fit ml-4"></span>
                   </div>
@@ -637,7 +700,8 @@
                     stroke="#020035"
                     stroke-width="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round" />
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
             </div>
@@ -819,7 +883,8 @@
             <!-- // -->
             <div class="bg-bg-info p-3.5">
               <label
-                class="border rounded-xl inline-block bg-white border-[#B3B0D8] px-7 py-3 font-bold cursor-pointer flex items-center flex-col">
+                class="border rounded-xl inline-block bg-white border-[#B3B0D8] px-7 py-3 font-bold cursor-pointer flex items-center flex-col"
+              >
                 <p>Mã Khuyến mại:</p>
                 <input type="text" class="outline-none uppercase" placeholder="Ví dụ: VMBSALE100" />
               </label>

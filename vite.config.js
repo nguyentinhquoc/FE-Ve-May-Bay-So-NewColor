@@ -37,6 +37,7 @@ export default defineConfig({
         flightPayment: "src/flight-payment.html",
         index: "src/index.html",
         mailTicket: "src/mail-ticket.html",
+        newsList:"src/news-list.html"
       },
     },
   },

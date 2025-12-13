@@ -38,3 +38,7 @@ body {
   --color-bg-gray: #e9ebee;
   --color-bg-info: #eefdff;
 }
+.plane-top {
+  background-color: #fff;
+  clip-path: ellipse(50% 100% at 50% 100%);
+}

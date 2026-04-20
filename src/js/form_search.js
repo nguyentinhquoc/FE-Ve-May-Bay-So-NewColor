@@ -12,7 +12,6 @@ const departurePointValue = document.getElementById("departure-point-value");
 const arrivalPointValue = document.getElementById("arrival-point-value");
 const departureDateValue = document.getElementById("departure-date-value");
 const returnDateValue = document.getElementById("return-date-value");
-
 // Toggle location modal
 const locationModal = document.getElementById("location-modal");
 const dateModal = document.getElementById("date-modal");
@@ -36,6 +35,10 @@ personInput.addEventListener("click", (elem) => {
   dateModal.classList.add("hidden");
 });
 departurePointInput.addEventListener("click", (elem) => {
+  // Nếu kích thước màn hình nhỏ hơn 1280px thì location modal sẽ không có translateX40 để tránh bị lệch vị trí so với input
+  if(window.innerWidth > 1024){
+    locationModal.classList.remove("translateX40");
+  }
   selectedInput = "departure_point";
   locationModal.classList.toggle("hidden");
   quantityModal.classList.add("hidden");
@@ -43,6 +46,10 @@ departurePointInput.addEventListener("click", (elem) => {
 });
 arrivalPointInput.addEventListener("click", (elem) => {
   selectedInput = "arrival_point";
+
+  if(window.innerWidth > 1024){
+    locationModal.classList.add("translateX40");
+  }
   locationModal.classList.toggle("hidden");
   quantityModal.classList.add("hidden");
   dateModal.classList.add("hidden");
@@ -113,21 +120,31 @@ personInputChange.forEach((elem) => {
   });
 });
 
+let changeLocationCounter = 0;
+
 // Chọn địa điểm trong modal
 locationModal.querySelectorAll(".location-option").forEach((elem) => {
   elem.addEventListener("click", (e) => {
     const name = e.target.closest(".location-option").querySelector(".name");
     const code = e.target.closest(".location-option").querySelector(".code");
     if (selectedInput === "departure_point") {
+      changeLocationCounter++;
       departurePointInput.querySelector(".display").textContent = `${name.textContent} (${code.textContent})`;
       // SetValue location hidden input
       departurePointValue.value = code.textContent;
+     locationModal.classList.add("hidden");
+     setTimeout(() => {
+      arrivalPointInput.dispatchEvent(new Event("click"));
+      }, 300);
     } else if (selectedInput === "arrival_point") {
       arrivalPointInput.querySelector(".display").textContent = `${name.textContent} (${code.textContent})`;
       // SetValue location hidden input
       arrivalPointValue.value = code.textContent;
-    }
     locationModal.classList.add("hidden");
+      setTimeout(() => {
+      departureDateInput.dispatchEvent(new Event("click"));
+      }, 300);
+    }
   });
 });
 // Change Một chiều || Khứ hồi form search
@@ -280,18 +297,16 @@ function renderCalendar(year, month) {
     "Tháng Mười Một",
     "Tháng Mười Hai",
   ];
-  const weekdays = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật"];
-  const firstDay = new Date(year, month).getDay();
+const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];  const firstDay = new Date(year, month).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   let start = firstDay === 0 ? 6 : firstDay - 1;
 
   let html = `
-        
         <div class="month">
           <div class="month-header">
-            <span class="max-sm:text-sm">${monthNames[month]}</span><span class="max-sm:text-sm">${year}</span>
+            <span class="text-sm">${monthNames[month]}</span><span class="text-sm">${year}</span>
           </div>
-          <div class="weekdays">${weekdays.map((d) => `<div class="max-sm:text-xs">${d}</div>`).join("")}</div>
+          <div class="weekdays">${weekdays.map((d) => `<div class="text-xs">${d}</div>`).join("")}</div>
           <div class="days">`;
   for (let i = 0; i < start; i++) html += `<div class="inactive"></div>`;
 
@@ -343,6 +358,9 @@ function handleDateClick(el) {
     departureDateInput.querySelector(".display").textContent = date;
     departureDateValue.value = date;
     dateModal.classList.add("hidden");
+    setTimeout(() => {
+      personInput.dispatchEvent(new Event("click"));
+    }, 300);
     return;
   }
   const d = new Date(el.dataset.date);
@@ -372,9 +390,19 @@ function updateRangeHighlight() {
     returnDateValue.value = endDate.toLocaleDateString("vi-VN");
     dateModal.classList.add("hidden");
   } else if (startDate) {
+
+    // Nếu chọn ngày khởi hành thì các ngày trước đó sẽ bị disable để tránh việc chọn ngày kết thúc trước ngày khởi hành
+    // Tại sao disable rồi mà vẫn có thể click chọn ngày đó làm ngày khởi hành? Vì khi render lại calendar thì mình chỉ thêm class "disabled" vào các ngày trước ngày khởi hành nhưng vẫn chưa remove event click vào các ngày đó, nên khi click vào các ngày đó thì vẫn có thể chọn làm ngày khởi hành được. Để fix vấn đề này thì mình sẽ remove event click vào các ngày đó khi render lại calendar.
+    document.querySelectorAll(".days div[data-date]").forEach((el) => {
+      const d = new Date(el.dataset.date);
+      if (d < startDate) {
+        el.classList.add("disabled");
+        el.replaceWith(el.cloneNode(true));
+      }
+    });
     departureDateInput.querySelector(".display").textContent = startDate.toLocaleDateString("vi-VN");
     departureDateValue.value = startDate.toLocaleDateString("vi-VN");
-  } else console.log("+++++++++++++++++++++");
+  } 
 }
 
 document.getElementById("prev").onclick = () => {

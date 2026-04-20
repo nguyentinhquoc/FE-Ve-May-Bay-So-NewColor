@@ -7,6 +7,11 @@ body {
   font-optical-sizing: auto;
 }
 
+
+.translateX40 {
+  transform: translateX(40%);
+}
+
 .container {
   padding-left: 40px;
   padding-right: 40px;
@@ -27,8 +32,18 @@ body {
   @media (width >= 80rem) {
     max-width: 80rem;
   }
+  @media (width <= 64rem) {
+    min-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
-
+#formSearch{
+  @media (width <= 48rem) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 @theme {
   --color-primary: #02066f;
   --color-highlight: #eba00a;

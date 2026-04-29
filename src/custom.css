@@ -4,14 +4,17 @@
    - dịch thêm sang trái -1rem, lên trên -0.25rem, phóng to 1.05x
    - tăng shadow
 */
-.card-price:hover,
-.card-price:focus {
-  transform: translateX(-1rem) translateY(-0.25rem) scale(1.05);
+.card-price:hover button,
+.card-price:focus button {
+  cursor: pointer;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-  /* hover:shadow-[0_12px_28px_rgba(0,0,0,0.15)] */
   outline: none;
-  /* nếu muốn bỏ focus outline */
+  /* // zooom lên 1.05x */
+  transform: scale(1.05);
 }
+
+
+
 
 /* // CALENDER */
 .calendar-wrapper {

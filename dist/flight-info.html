@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body class="text-text-primary">
@@ -45,29 +44,30 @@
     </div>
   </div>
 </header>
- <section class="container mx-auto mt-7.5 relative">
-  <div class="bg-[#CAF0F8] rounded-t-xl max-xl:hidden">
-    <ul class="flex gap-2 justify-start items-center">
+ 
+    <section class="container mx-auto mt-7.5 relative max-lg:static max-md:w-full" id="formSearch">
+  <div class="bg-[#CAF0F8] rounded-t-xl ">
+    <ul class="flex gap-2 justify-start items-center overflow-x-scroll" style="overflow: auto; scrollbar-width: none; -ms-overflow-style: none;">
       <li>
-        <a href="#" class="text-xl text-accent p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/vemaybay.svg" alt="">
+        <a href="#" class=" text-accent whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vemaybay.svg" alt>
           Vé máy bay</a>
       </li>
-      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/khachsan.svg" alt="">
+      <li><a href="#" class=" text-text-primary whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khachsan.svg" alt>
           Khách sạn</a></li>
-      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/tour.svg" alt="">
+      <li><a href="#" class=" text-text-primary whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tour.svg" alt>
           Tour</a></li>
-      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/vecongvien.svg" alt="">
+      <li><a href="#" class=" text-text-primary whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/vecongvien.svg" alt>
           Vé công viên</a></li>
-      <li><a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/khampha.svg" alt="">
+      <li><a href="#" class=" text-text-primary whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/khampha.svg" alt>
           Khám phá</a></li>
       <li>
-        <a href="#" class="text-xl text-text-primary p-4 font-semibold flex gap-2 items-center">
-          <img src="./nav/tracuu.svg" alt="">
+        <a href="#" class=" text-text-primary whitespace-nowrap p-4 font-semibold flex gap-2 items-center">
+          <img src="./nav/tracuu.svg" alt>
           Tra cứu vé</a>
       </li>
     </ul>
@@ -100,55 +100,52 @@
             <img src="./search/drop-dow.svg" alt="Icon member" />
           </div>
           <!-- START QUANTITY -->
-          <div id="quantity-modal"
-            class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw] left-0 z-9999 text-text-primary">
+          <div id="quantity-modal" class="w-90 hidden bg-white flex flex-col gap-8 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute top-8 max-xl:right-0 max-xl:left-auto max-sm:right-auto max-sm:left-0 max-sm:w-[73vw] left-0 z-9999 text-text-primary ">
             <div class="flex gap-2 items-center">
-              <img src="./search/user-plus.svg" alt="" />
+              <img src="./search/user-plus.svg" alt />
               <p class="font-semibold">Số lượng hành khách</p>
             </div>
             <div>
-              <div data-type="adult-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
+              <div data-type="adult-passenger-value" class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Người lớn</p>
                 <div class="flex gap-5">
                   <div class="minus-button">
-                    <img src="./search/minus.svg" alt="" />
+                    <img src="./search/minus.svg" alt />
                   </div>
                   <input type="text" class="max-w-3 outline-none" name="adult_passenger" value="1" />
                   <div class="plus-button">
-                    <img src="./search/plus.svg" alt="" />
+                    <img src="./search/plus.svg" alt  />
                   </div>
                 </div>
               </div>
-              <div data-type="child-passenger-value"
-                class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
+              <div data-type="child-passenger-value" class="person-input-change flex justify-between border-b border-[#B3B0D8] py-5">
                 <p>Trẻ em <span class="ml-2 text-sm text-[#B3B0D8]">2-11</span></p>
                 <div class="flex gap-5">
                   <div class="minus-button">
-                    <img src="./search/minus.svg" alt="" />
+                    <img src="./search/minus.svg" alt />
                   </div>
                   <input type="text" class="max-w-3 outline-none" name="child_passenger" value="0" />
                   <div class="plus-button">
-                    <img src="./search/plus.svg" alt="" />
+                    <img src="./search/plus.svg" alt />
                   </div>
                 </div>
               </div>
               <div data-type="infant-passenger-value" class="person-input-change flex justify-between py-5">
-                <p>Em bé<span class="ml-2 text-sm text-[#B3B0D8]">Dưới 2</span></p>
+                <p>Em bé<span class="ml-2 text-sm text-[#B3B0D8]">Dưới
+                    2</span></p>
                 <div class="flex gap-5">
                   <div class="minus-button">
-                    <img src="./search/minus.svg" alt="" />
+                    <img src="./search/minus.svg" alt />
                   </div>
                   <input type="text" class="max-w-3 outline-none" name="infant_passenger" value="0" />
                   <div class="plus-button">
-                    <img src="./search/plus.svg" alt="" />
+                    <img src="./search/plus.svg" alt />
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer"
-                onclick="
+              <div class="bg-primary text-white font-semibold w-full py-2.5 rounded-xl text-center cursor-pointer" onclick="
                 document.getElementById('quantity-modal').classList.add('hidden');
               ">
                 Xác nhận
@@ -158,40 +155,38 @@
           <!--END  QUANTITY -->
         </div>
       </div>
-      <div class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1"
-        id="form-search-input">
-        <div class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer"
-          id="departure-point-input">
-          <div>
+      <div class="justify-between gap-3 my-2 grid grid-cols-4 max-xl:grid-cols-2 max-sm:grid-cols-1" id="form-search-input">
+        <div class="bg-white rounded-md flex justify-between items-center cursor-pointer" id="departure-point-input">
+          <div class="p-3">
             <div class="flex gap-2">
-              <img src="./search/plane-start.svg" alt="icon plane" />
-              <span class="text-text-primary text-sm">Điểm khởi hành</span>
+              <img src="./search/plane-start.svg" alt="icon plane" width="20" />
+              <span class="text-text-primary opacity-70 text-sm">Điểm khởi hành</span>
             </div>
-            <p class="text-text-primary text-lg font-bold line-clamp-1 display">Hà Nội (HAN)</p>
+            <p class="text-text-primary text-lg font-bold line-clamp-1 display">Hà
+              Nội (HAN)</p>
           </div>
           <div class="p-4 border-l border-l-[#D3D9DC]">
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
           </div>
         </div>
-        <div class="bg-white rounded-md p-3 flex justify-between items-center cursor-pointer" id="arrival-point-input">
-          <div>
-            <div class="flex gap-2">
-              <img src="./search/plane-start.svg" alt="icon plane" />
-              <span class="text-text-primary text-sm">Điểm khởi hành</span>
+        <div class="bg-white rounded-md flex justify-between items-center cursor-pointer" id="arrival-point-input">
+          <div class="p-3">
+            <div class="flex gap-2 items-end">
+              <img src="./search/plane-start.svg" alt="icon plane" width="20" />
+              <span class="text-text-primary opacity-70 text-sm">Điểm đến</span>
             </div>
-            <p class="text-text-primary text-lg font-bold line-clamp-1 display">Hồ Chí Minh (SGN)</p>
+            <p class="text-text-primary text-lg font-bold line-clamp-1 display">Hồ
+              Chí Minh (SGN)</p>
           </div>
           <div class="p-4 border-l border-l-[#D3D9DC]">
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
           </div>
         </div>
-        <div
-          class="bg-white rounded-md p-3 flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer"
-          id="departure-date-input">
-          <div>
-            <div class="flex gap-2">
-              <img src="./search/calender.svg" alt="icon plane" />
-              <span class="text-text-primary text-sm">Ngày đi</span>
+        <div class="bg-white rounded-md  flex justify-between items-center max-xl:col-span-2 max-sm:col-span-1 cursor-pointer" id="departure-date-input">
+          <div class="p-3">
+            <div class="flex gap-2 items-end">
+              <img src="./search/calender.svg" alt="icon plane" width="20" />
+              <span class="text-text-primary opacity-70 text-sm">Ngày đi</span>
             </div>
             <p class="text-text-primary text-lg font-bold line-clamp-1 display">20/11/2025</p>
           </div>
@@ -199,12 +194,11 @@
             <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
           </div>
         </div>
-        <div class="bg-white rounded-md p-3 flex justify-between items-center hidden cursor-pointer"
-          id="return-date-input">
-          <div>
-            <div class="flex gap-2">
-              <img src="./search/calender.svg" alt="icon plane" />
-              <span class="text-text-primary text-sm">Ngày về</span>
+        <div class="bg-white rounded-md flex justify-between items-center hidden cursor-pointer" id="return-date-input">
+          <div class="p-3">
+            <div class="flex gap-2 items-end">
+              <img src="./search/calender.svg" alt="icon plane" width="20" />
+              <span class="text-text-primary opacity-70 text-sm">Ngày về</span>
             </div>
             <p class="text-text-primary text-lg font-bold line-clamp-1 display">26/11/2025</p>
           </div>
@@ -213,158 +207,176 @@
           </div>
         </div>
         <div class="bg-accent rounded-md max-xl:col-span-2 max-sm:col-span-1 max-xl:py-6">
-          <button class="w-full h-full uppercase font-bold text-[22px]">Tìm kiếm</button>
+          <button class=" w-full h-full uppercase font-bold text-[22px]">Tìm
+            kiếm</button>
         </div>
       </div>
     </form>
     <!-- LOCATION -->
-    <div id="location-modal"
-      class="hidden bg-white flex flex-col gap-6 max-w-[960px] p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 text-text-primary">
-      <div>
-        <p class="text-2xl font-bold">Nhập Mã Sân bay hoặc Tên Thành phố</p>
-      </div>
-      <div class="flex flex-wrap gap-4 items-center">
-        <label class="flex items-center gap-2 rounded-xl border border-[#CAF0F8] px-4 py-2 max-w-[240px]">
-          <div>
-            <img src="./search/search.svg" alt="" />
+    <div id="location-modal" class="hidden w-3xl bg-white flex flex-col gap-2 p-6 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 right-10 z-9999 text-text-primary max-lg:fixed max-lg:left-0 max-lg:bottom-0 max-lg:right-0 max-lg:top-30 max-lg:w-screen max-sm:p-3 overflow-y-scroll max-lg:max-h-screen">
+      <div class="items-center gap-2 flex flex-wrap justify-start">
+        <label class="flex items-center w-full gap-1 rounded-xl border border-[#CAF0F8] px-4 py-1">
+          <div class="mr-2">
+            <img src="./search/search.svg" alt width="20px" />
           </div>
           <div>
-            <p class="text-sm">Tìm kiếm Sân Bay:</p>
-            <input type="text" class="w-full outline-none" placeholder="Ví dụ: HAN" />
+            <p class="text-sm">Nhập Mã Sân bay hoặc Tên Thành phố:</p>
+            <input type="text" class="w-full text-sm outline-none" placeholder="Ví dụ: HAN" />
           </div>
         </label>
-        <label class="bg-bg-info bg-primary text-white rounded-lg font-bold px-4 py-2 cursor-pointer">
-          <input hidden type="radio" name="typeCity" class="typeCity" value="vietnam" checked /> Việt Nam
-        </label>
-        <label class="bg-bg-info text-text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
-          <input hidden type="radio" name="typeCity" class="typeCity" value="chaua" /> Châu Á
-        </label>
-        <label class="bg-bg-info text-text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
-          <input hidden type="radio" name="typeCity" class="typeCity" value="chauau" /> Châu Âu
-        </label>
-        <label class="bg-bg-info text-text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
-          <input hidden type="radio" name="typeCity" class="typeCity" value="hoaky-canada" /> Hoa Kỳ - Canada
-        </label>
-        <label class="bg-bg-info text-text-primary rounded-lg font-bold px-4 py-2 cursor-pointer">
-          <input hidden type="radio" name="typeCity" class="typeCity" value="chauuc-phi" /> Châu Úc - Phi
-        </label>
+        <div class="flex gap-2 overflow-x-scroll py-2.5" style="overflow: auto; scrollbar-width: none; -ms-overflow-style: none;">
+          <label class="bg-bg-info whitespace-nowrap w-fit bg-primary text-white rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="vietnam" checked />
+            <p>Việt Nam</p>
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit bg-primary text-white rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="vietnam" checked /> Việt Nam
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit bg-primary text-white rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="vietnam" checked /> Việt Nam
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit text-text-primary rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="chaua" /> Châu Á
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit text-text-primary rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="chauau" /> Châu Âu
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit text-text-primary rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="hoaky-canada" /> Hoa Kỳ - Canada
+          </label>
+          <label class="bg-bg-info whitespace-nowrap w-fit text-text-primary rounded-lg font-bold text-sm px-4 py-2 cursor-pointer">
+            <input hidden type="radio" name="typeCity" class="typeCity" value="chauuc-phi" /> Châu Úc - Phi
+          </label>
+        </div>
       </div>
-      <div class="shadow-[0px_8px_30px_rgba(0,0,0,0.15)] py-6 px-9 rounded-xl">
-        <p class="text-accent text-2xl mb-7">Nội địa - Sân bay tại Việt Nam</p>
-        <div class="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2">
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">HAN</p>
-            <p class="text-xl name">Hà Nội</p>
+      <div style="overflow: auto; scrollbar-width: none; -ms-overflow-style: none;" class="max-lg:h-full overflow-y-scroll shadow-[0px_8px_30px_rgba(0,0,0,0.15)] py-6 px-9 rounded-xl h-100">
+        <p class="text-accent font-bold mb-3">Nội địa - Sân bay tại Việt Nam</p>
+        <div class="  grid grid-cols-3 gap-7 max-sm:grid-cols-1 max-lg:grid-cols-2 " id="contaner-airport">
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">SGN</p>
+            <p class="text-lg name">Hồ Chí Minh</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">SGN</p>
-            <p class="text-xl name">Hồ Chí Minh</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">HPH</p>
+            <p class="text-lg name">Hải Phòng</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">DAD</p>
-            <p class="text-xl name">Đà Nẵng</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">THD</p>
+            <p class="text-lg name">Thanh Hóa</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">HPH</p>
-            <p class="text-xl name">Hải Phòng</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VII</p>
+            <p class="text-lg name">Vinh</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">THD</p>
-            <p class="text-xl name">Thanh Hóa</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">HPH</p>
+            <p class="text-lg name">Hải Phòng</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">VCA</p>
-            <p class="text-xl name">Cần Thơ</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">THD</p>
+            <p class="text-lg name">Thanh Hóa</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">VII</p>
-            <p class="text-xl name">Vinh</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VII</p>
+            <p class="text-lg name">Vinh</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">VDH</p>
-            <p class="text-xl name">Quảng Bình</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">HPH</p>
+            <p class="text-lg name">Hải Phòng</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">CXR</p>
-            <p class="text-xl name">Nha Trang</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">THD</p>
+            <p class="text-lg name">Thanh Hóa</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">DLI</p>
-            <p class="text-xl name">Đà Lạt</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VII</p>
+            <p class="text-lg name">Vinh</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">PXU</p>
-            <p class="text-xl name">Pleiku</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">HPH</p>
+            <p class="text-lg name">Hải Phòng</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">TBB</p>
-            <p class="text-xl name">Phú Yên</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">THD</p>
+            <p class="text-lg name">Thanh Hóa</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">BMV</p>
-            <p class="text-xl name">Ban Mê Thuột</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VII</p>
+            <p class="text-lg name">Vinh</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">VKG</p>
-            <p class="text-xl name">Kiên Giang</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VDH</p>
+            <p class="text-lg name">Quảng Bình</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">DIN</p>
-            <p class="text-xl name">Điện Biên</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VCA</p>
+            <p class="text-lg name">Cần Thơ</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">VDO</p>
-            <p class="text-xl name">Vân Đồn</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VKG</p>
+            <p class="text-lg name">Kiên Giang</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">UIH</p>
-            <p class="text-xl name">Quy Nhơn</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VCL</p>
+            <p class="text-lg name">Quảng Nam</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="vietnam">
-            <p class="font-bold text-[32px] uppercase code">HUI</p>
-            <p class="text-xl name">Huế</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">HUI</p>
+            <p class="text-lg name">Huế</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chaua">
-            <p class="font-bold text-[32px] uppercase code">PQC</p>
-            <p class="text-xl name">Phú Quốc</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">PXU</p>
+            <p class="text-lg name">PleiKu</p>
           </div>
-          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8] pb-3 location-option"
-            data-cityType="chauau">
-            <p class="font-bold text-[32px] uppercase code">VCS</p>
-            <p class="text-xl name">Côn Đảo</p>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">TBB</p>
+            <p class="text-lg name">Phú Yên</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">BMV</p>
+            <p class="text-lg name">Ban Mê Thuột</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">CXR</p>
+            <p class="text-lg name">Nha Trang</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">UIH</p>
+            <p class="text-lg name">Qui Nhơn</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">DLI</p>
+            <p class="text-lg name">Đà Lạt</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">CAH</p>
+            <p class="text-lg name">Cà Mau</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">PQC</p>
+            <p class="text-lg name">Phú Quốc</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VCS</p>
+            <p class="text-lg name">Côn Đảo</p>
+          </div>
+          <div class="flex gap-1 items-end border-b cursor-pointer border-[#CAF0F8]  location-option" data-citytype="vietnam">
+            <p class="font-bold text-3xl uppercase code">VDO</p>
+            <p class="text-lg name">Vân Đồn</p>
           </div>
         </div>
       </div>
     </div>
     <!-- END LOCATION -->
     <!-- DATE -->
-    <div
-      class="hidden calendar-wrapper bg-white text-black flex flex-col gap-6 max-w-[960px] max-xl:w-[93%] max-sm:w-[80%] max-lg:w-[90%] w-fit p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 max-sm:p-3"
-      id="date-modal">
-      <div class="calendar-header">
+    <div  class="hidden max-lg:overflow-y-scroll  calendar-wrapper bg-white text-black flex flex-col gap-6 max-w-[760px] w-fit p-5 shadow-[0px_8px_30px_rgba(0,0,0,0.15)] absolute left-10 z-9999 max-sm:p-3 max-lg:fixed max-lg:left-0 max-lg:right-0 max-lg:top-0  max-lg:bottom-0 max-lg:w-screen" id="date-modal">
+      <div class="calendar-header ">
         <div class="mb-4">
-          <p class="text-2xl text-primary max-sm:text-base">Quý khách vui lòng chọn ngày bay</p>
-          <p class="text-sm text-[#00ABC0] max-sm:text-xs">
-            Ngày bay chiều đi phải được chọn trước ngày về. Ngày về chỉ được trùng với ngày bay đi và ngày bay sau
+          <p class=" text-primary max-sm:text-base">Quý khách vui lòng chọn ngày
+            bay</p>
+          <p class="text-xs text-[#00ABC0] max-sm:text-xs">
+            Ngày bay chiều đi phải được chọn trước ngày về. Ngày về chỉ được
+            trùng với ngày bay đi và ngày bay sau
           </p>
         </div>
         <div class="flex gap-4 items-center">
@@ -379,23 +391,23 @@
           <div class="flex justify-between flex-2 px-5 max-sm:px-1">
             <div class="flex gap-2 items-center ml-">
               <div class="p-2.5 bg-primary rounded-4xl max-sm:p-1"></div>
-              <p class="max-sm:text-xs">Ngày bay đã chọn</p>
+              <p class="text-xs">Ngày bay đã chọn</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-[#00ABC0] rounded-4xl max-sm:p-1"></div>
-              <p class="max-sm:text-xs">Ngày hiện tại</p>
+              <div class="p-2.5 bg-[#00ABC0] rounded-4xl p-1"></div>
+              <p class="text-xs">Ngày hiện tại</p>
             </div>
             <div class="flex gap-2 items-center">
-              <div class="p-2.5 bg-accent rounded-4xl max-sm:p-1"></div>
-              <p class="max-sm:text-xs">Ngày lễ</p>
+              <div class="p-2.5 bg-accent rounded-4xl p-1"></div>
+              <p class="text-xs">Ngày lễ</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="relative box-calendar">
+      <div class="relative box-calendar ">
         <div class="absolute top-0 right-0 left-0 flex justify-between items-center">
-          <button id="prev" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&lt;</button>
-          <button id="next" class="text-3xl cursor-pointer p-6 max-sm:text-xl">&gt;</button>
+          <button id="prev" class=" cursor-pointer p-6 text-xl">&lt;</button>
+          <button id="next" class=" cursor-pointer p-6 text-xl">&gt;</button>
         </div>
         <div id="calendar"></div>
       </div>
@@ -409,7 +421,8 @@
         <div>
           <h1 class="text-2xl font-bold">Thông tin Chuyến bay</h1>
           <p class="text-sm text-[#00ABC0]">
-            Giá vé chưa bao gồm thuế và các loại phí khác, quý khách lưu ý chọn chi tiết để xem đầy
+            Giá vé chưa bao gồm thuế và các loại phí khác, quý khách lưu ý chọn
+            chi tiết để xem đầy
             đủ.
           </p>
         </div>
@@ -427,29 +440,31 @@
               <!-- //BOX -->
               <div class="flex flex-col gap-5">
                 <div
-                  class="plane-items-selected overflow-hidden rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
-                >
+                  class="plane-items-selected overflow-hidden rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <div
-                    class="clicked flex cursor-pointer items-start justify-between bg-[#CAF0F8] px-4 py-1.5 select-none max-lg:flex-wrap"
-                  >
+                    class="clicked flex cursor-pointer items-start justify-between bg-[#CAF0F8] px-4 py-1.5 select-none max-lg:flex-wrap">
                     <div>
-                      <p class="text-base font-bold">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
+                      <p class="text-base font-bold">Chuyến bay chiều đi: Hà Nội
+                        đến Luân Đôn</p>
                       <p class="text-base">
                         <span class="max-md:block">Thứ 4, 10 tháng 12</span>
-                        <span class="ml-3 max-md:ml-0 max-md:block"
-                          >18:55 - 12:05 (2h 30 m , Bay thẳng)</span
-                        >
+                        <span class="ml-3 max-md:ml-0 max-md:block">18:55 -
+                          12:05 (2h 30 m , Bay thẳng)</span>
                       </p>
                     </div>
                     <div>
-                      <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé &gt;</p>
+                      <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé
+                        &gt;</p>
                     </div>
                   </div>
-                  <div class="grid grid-cols-5 p-4 max-lg:grid-cols-2 max-md:block">
-                    <div class="flex flex-col gap-4 max-lg:col-span-2 max-lg:mb-5">
+                  <div
+                    class="grid grid-cols-5 p-4 max-lg:grid-cols-2 max-md:block">
+                    <div
+                      class="flex flex-col gap-4 max-lg:col-span-2 max-lg:mb-5">
                       <div class="flex items-start gap-3">
                         <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt class="w-10" />
+                          <img src="./flight-list/VietnamAirlines.png" alt
+                            class="w-10" />
                         </div>
                         <div class="text-sm">
                           <p class="font-bold">Vietnam Airlines</p>
@@ -469,8 +484,7 @@
                     </div> -->
                     </div>
                     <div
-                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:mb-5 max-md:justify-start"
-                    >
+                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:mb-5 max-md:justify-start">
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -483,8 +497,7 @@
                       </div>
                     </div>
                     <div
-                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:justify-start"
-                    >
+                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:justify-start">
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -498,8 +511,7 @@
                     </div>
                   </div>
                   <div
-                    class="conditions flex hidden justify-between gap-10 border-t border-dotted border-[#EBA00A] px-10 py-4 max-md:flex-col max-md:gap-5"
-                  >
+                    class="conditions flex hidden justify-between gap-10 border-t border-dotted border-[#EBA00A] px-10 py-4 max-md:flex-col max-md:gap-5">
                     <div class="flex gap-1.5">
                       <div><img src="./flight-info/bag.svg" alt /></div>
                       <div>
@@ -507,7 +519,8 @@
                         <ul class="my-1 text-sm">
                           <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
                         </ul>
-                        <p class="text-sm text-[#878C93]">( Tổng hành lý đã bao gồm trong giá )</p>
+                        <p class="text-sm text-[#878C93]">( Tổng hành lý đã bao
+                          gồm trong giá )</p>
                       </div>
                     </div>
                     <div class="flex gap-1.5">
@@ -515,9 +528,12 @@
                       <div>
                         <p class="text-base">Điều kiện vé</p>
                         <ul class="my-1 text-sm">
-                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu&nbsp; có).</li>
-                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
-                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
+                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé
+                            (nếu&nbsp; có).</li>
+                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu
+                            phí;</li>
+                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp
+                            dụng.</li>
                         </ul>
                         <p class="text-sm text-[#878C93]">
                           Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.
@@ -528,29 +544,31 @@
                 </div>
                 <!-- //-->
                 <div
-                  class="plane-items-selected overflow-hidden rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
-                >
+                  class="plane-items-selected overflow-hidden rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <div
-                    class="clicked flex cursor-pointer items-start justify-between bg-[#CAF0F8] px-4 py-1.5 select-none max-lg:flex-wrap"
-                  >
+                    class="clicked flex cursor-pointer items-start justify-between bg-[#CAF0F8] px-4 py-1.5 select-none max-lg:flex-wrap">
                     <div>
-                      <p class="text-base font-bold">Chuyến bay chiều đi: Hà Nội đến Luân Đôn</p>
+                      <p class="text-base font-bold">Chuyến bay chiều đi: Hà Nội
+                        đến Luân Đôn</p>
                       <p class="text-base">
                         <span class="max-md:block">Thứ 4, 10 tháng 12</span>
-                        <span class="ml-3 max-md:ml-0 max-md:block"
-                          >18:55 - 12:05 (2h 30 m , Bay thẳng)</span
-                        >
+                        <span class="ml-3 max-md:ml-0 max-md:block">18:55 -
+                          12:05 (2h 30 m , Bay thẳng)</span>
                       </p>
                     </div>
                     <div>
-                      <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé &gt;</p>
+                      <p class="text-sm font-bold max-lg:mt-2">Điều kiện vé
+                        &gt;</p>
                     </div>
                   </div>
-                  <div class="grid grid-cols-5 p-4 max-lg:grid-cols-2 max-md:block">
-                    <div class="flex flex-col gap-4 max-lg:col-span-2 max-lg:mb-5">
+                  <div
+                    class="grid grid-cols-5 p-4 max-lg:grid-cols-2 max-md:block">
+                    <div
+                      class="flex flex-col gap-4 max-lg:col-span-2 max-lg:mb-5">
                       <div class="flex items-start gap-3">
                         <div>
-                          <img src="./flight-list/VietnamAirlines.png" alt class="w-10" />
+                          <img src="./flight-list/VietnamAirlines.png" alt
+                            class="w-10" />
                         </div>
                         <div class="text-sm">
                           <p class="font-bold">Vietnam Airlines</p>
@@ -570,8 +588,7 @@
                     </div> -->
                     </div>
                     <div
-                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:mb-5 max-md:justify-start"
-                    >
+                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:mb-5 max-md:justify-start">
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -584,8 +601,7 @@
                       </div>
                     </div>
                     <div
-                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:justify-start"
-                    >
+                      class="col-span-2 flex items-start justify-center gap-2 max-lg:col-span-1 max-md:justify-start">
                       <div>
                         <img src="./flight-info/plane-start.svg" alt />
                       </div>
@@ -599,8 +615,7 @@
                     </div>
                   </div>
                   <div
-                    class="conditions flex hidden justify-between gap-10 border-t border-dotted border-[#EBA00A] px-10 py-4 max-md:flex-col max-md:gap-5"
-                  >
+                    class="conditions flex hidden justify-between gap-10 border-t border-dotted border-[#EBA00A] px-10 py-4 max-md:flex-col max-md:gap-5">
                     <div class="flex gap-1.5">
                       <div><img src="./flight-info/bag.svg" alt /></div>
                       <div>
@@ -608,7 +623,8 @@
                         <ul class="my-1 text-sm">
                           <li>Mỗi hành khách có 07kg hành lý xách tay.</li>
                         </ul>
-                        <p class="text-sm text-[#878C93]">( Tổng hành lý đã bao gồm trong giá )</p>
+                        <p class="text-sm text-[#878C93]">( Tổng hành lý đã bao
+                          gồm trong giá )</p>
                       </div>
                     </div>
                     <div class="flex gap-1.5">
@@ -616,9 +632,12 @@
                       <div>
                         <p class="text-base">Điều kiện vé</p>
                         <ul class="my-1 text-sm">
-                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé (nếu&nbsp; có).</li>
-                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu phí;</li>
-                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp dụng.</li>
+                          <li>Phí đổi: 360.000 VNĐ/1 khách+chênh lệch giá vé
+                            (nếu&nbsp; có).</li>
+                          <li>Quầy ưu tiên: Không; Đổi chuyến tại sân bay: Thu
+                            phí;</li>
+                          <li>Chọn chỗ: Thu phí; Phòng Bông Sen: Không áp
+                            dụng.</li>
                         </ul>
                         <p class="text-sm text-[#878C93]">
                           Vé không hoàn tiền. Hoàn bảo lưu mất phí trước 24h.
@@ -635,27 +654,37 @@
                 <div>
                   <h2 class="text-2xl font-bold">Thông tin Hành khách</h2>
                   <p class="text-sm">
-                    Người lớn Từ đủ 12 tuổi trở lên, Trẻ em từ đủ 2 tuổi đến dưới 12 tuổi, Em bé
+                    Người lớn Từ đủ 12 tuổi trở lên, Trẻ em từ đủ 2 tuổi đến
+                    dưới 12 tuổi, Em bé
                     dưới 02 tuổi.
                   </p>
                 </div>
                 <div class="rounded-xl bg-[#EDFDFF] px-5 py-3">
-                  <p class="text-accent font-bold">Lưu ý! Kiểm tra thông tin cá nhân của bạn</p>
+                  <p class="text-accent font-bold">Lưu ý! Kiểm tra thông tin cá
+                    nhân của bạn</p>
                   <p class="mt-2 text-sm">
-                    Do các quy định của hãng hàng không, điều quan trọng là tên của hành khách đi
-                    máy bay được nhập vào ô họ tên và ngày tháng năm sinh đối với trẻ em, em bé phải
-                    trùng với giấy tờ tùy thân đảm bảo lên máy bay. Vemaybayso sẽ không chịu trách
-                    nhiệm trong trường hợp hành khách bị từ chối làm thủ tục bay/quá cảnh/nhập cảnh
-                    do nhập sai thông tin giấy tờ. Rất tiếc, chúng tôi không thể hỗ trợ bạn sửa tên
+                    Do các quy định của hãng hàng không, điều quan trọng là tên
+                    của hành khách đi
+                    máy bay được nhập vào ô họ tên và ngày tháng năm sinh đối
+                    với trẻ em, em bé phải
+                    trùng với giấy tờ tùy thân đảm bảo lên máy bay. Vemaybayso
+                    sẽ không chịu trách
+                    nhiệm trong trường hợp hành khách bị từ chối làm thủ tục
+                    bay/quá cảnh/nhập cảnh
+                    do nhập sai thông tin giấy tờ. Rất tiếc, chúng tôi không thể
+                    hỗ trợ bạn sửa tên
                     sau khi đặt vé được xác nhận.
                   </p>
                 </div>
-                <div class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+                <div
+                  class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <div class="flex w-full justify-between">
                     <div>
-                      <label class="flex cursor-pointer items-center gap-2 select-none">
+                      <label
+                        class="flex cursor-pointer items-center gap-2 select-none">
                         <input type="radio" name />
-                        <p class="font-bold">Sử dụng thông tin hành khách là thông tin liên hệ</p>
+                        <p class="font-bold">Sử dụng thông tin hành khách là
+                          thông tin liên hệ</p>
                       </label>
                     </div>
                     <div>
@@ -665,33 +694,33 @@
                   <!-- // Người lớn -->
                   <div class="mt-3 flex flex-col gap-2">
                     <p class="text-sm font-bold">Người lớn:</p>
-                    <div class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
+                    <div
+                      class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
                           <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
                             <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Ông
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Bà
                             </li>
                           </ul>
@@ -700,86 +729,76 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Họ và tên: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Ngày sinh: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           CCCD/Hộ chiếu:
                           <input
                             type="text"
                             placeholder="001234567899"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Thẻ Thành viên:
                           <input
                             type="text"
                             placeholder="Ví dụ: 0932112232"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
                     </div>
                     <div
-                      class="grid grid-cols-11 gap-2 text-sm max-lg:mt-5 max-sm:flex max-sm:flex-col"
-                    >
+                      class="grid grid-cols-11 gap-2 text-sm max-lg:mt-5 max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
                           <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
                             <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Ông
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Bà
                             </li>
                           </ul>
@@ -788,53 +807,45 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Họ và tên: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Ngày sinh: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           CCCD/Hộ chiếu:
                           <input
                             type="text"
                             placeholder="001234567899"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Thẻ Thành viên:
                           <input
                             type="text"
                             placeholder="Ví dụ: 0932112232"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
@@ -843,33 +854,33 @@
                   <!-- // Trẻ em -->
                   <div class="mt-3 flex flex-col gap-2">
                     <p class="text-sm font-bold">Trẻ em:</p>
-                    <div class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
+                    <div
+                      class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
-                          <div class="">
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
+                          <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="" />
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
+                            <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Trẻ em gái
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Trẻ em trai
                             </li>
                           </ul>
@@ -878,53 +889,45 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Họ và tên: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Ngày sinh: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           CCCD/Hộ chiếu:
                           <input
                             type="text"
                             placeholder="001234567899"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Thẻ Thành viên:
                           <input
                             type="text"
                             placeholder="Ví dụ: 0932112232"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
@@ -933,33 +936,33 @@
                   <!-- // Em bé -->
                   <div class="mt-3 flex flex-col gap-2">
                     <p class="text-sm font-bold">Em bé:</p>
-                    <div class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
+                    <div
+                      class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
-                          <div class="">
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
+                          <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="" />
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
+                            <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Em bé gái
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Em bé trai
                             </li>
                           </ul>
@@ -968,53 +971,45 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Họ và tên: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Ngày sinh: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           CCCD/Hộ chiếu:
                           <input
                             type="text"
                             placeholder="001234567899"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
                       <div class="col-span-2 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Thẻ Thành viên:
                           <input
                             type="text"
                             placeholder="Ví dụ: 0932112232"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit"></span>
                       </div>
@@ -1029,15 +1024,18 @@
                 <div>
                   <h2 class="text-2xl font-bold">Thông tin Liên hệ</h2>
                   <p class="text-sm">
-                    Xin vui lòng điền vào tất cả các thông tin. Hãng sẽ liên hệ đến bạn nếu có thay
+                    Xin vui lòng điền vào tất cả các thông tin. Hãng sẽ liên hệ
+                    đến bạn nếu có thay
                     đổi liên quan đến chuyến bay.
                   </p>
                 </div>
 
-                <div class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+                <div
+                  class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <div class="flex w-full justify-between">
                     <div>
-                      <label class="flex cursor-pointer items-center gap-2 select-none">
+                      <label
+                        class="flex cursor-pointer items-center gap-2 select-none">
                         <input type="radio" name />
                         <p class="font-bold">Có lấy hóa đơn GTGT</p>
                       </label>
@@ -1049,33 +1047,33 @@
                   <!-- // Người đại diện -->
                   <div class="mt-3 flex flex-col gap-2">
                     <p class="text-sm font-bold">Người đại diện:</p>
-                    <div class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
+                    <div
+                      class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
-                          <div class="">
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
+                          <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="" />
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
+                            <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Ông
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Bà
                             </li>
                           </ul>
@@ -1084,40 +1082,34 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Họ và tên: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Điện thoại: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-3 text-red-500 max-lg:col-span-6">
                         <label
-                          class="border-red inline-block w-full rounded-lg border px-3 pt-1.5 pb-3.5"
-                        >
+                          class="border-red inline-block w-full rounded-lg border px-3 pt-1.5 pb-3.5">
                           Email: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="abc@gmail.com"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Email sai định dạng</span>
                       </div>
@@ -1125,33 +1117,33 @@
                   </div>
 
                   <div class="mt-3 flex flex-col gap-2">
-                    <div class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
+                    <div
+                      class="grid grid-cols-11 gap-2 text-sm max-sm:flex max-sm:flex-col">
                       <div class="col-span-2 max-lg:col-span-3">
                         <label
-                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none"
-                        >
-                          <div class="">
+                          class="select-customer-wrapper relative flex w-full cursor-pointer items-stretch justify-between rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5 select-none">
+                          <div class>
                             Quý danh: <span class="text-red-500">*</span>
-                            <p class="text-render w-full font-semibold">Chưa chọn</p>
-                            <input type="hidden" disabled="" value="" />
+                            <p class="text-render w-full font-semibold">Chưa
+                              chọn</p>
+                            <input type="hidden" disabled value />
                           </div>
-                          <div class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
-                            <img src="./search/drop-dow-gray.svg" alt="icon drop dow" />
+                          <div
+                            class="py-auto border-l border-l-[#D3D9DC] pt-5 pr-0 pl-3">
+                            <img src="./search/drop-dow-gray.svg"
+                              alt="icon drop dow" />
                           </div>
                           <!-- // Custom select -->
                           <ul
-                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white"
-                          >
+                            class="select-customer-dropdown absolute top-full left-0 z-10 mt-1 hidden w-full rounded-lg border border-[#B3B0D8] bg-white">
                             <li
                               class="option border-b border-[#B3B0D8] px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="ÔngVlaues"
-                            >
+                              data-value="ÔngVlaues">
                               Đơn vị
                             </li>
                             <li
                               class="option px-2 pt-1.5 pb-3.5 font-semibold hover:bg-gray-400 hover:text-white"
-                              data-value="Bà"
-                            >
+                              data-value="Bà">
                               Tổ chức
                             </li>
                           </ul>
@@ -1160,40 +1152,34 @@
                       </div>
                       <div class="col-span-3 max-lg:col-span-6">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Tên tổ chức:
                           <input
                             type="text"
                             placeholder="Ví dụ: Nguyen Van A"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-3 max-lg:col-span-5">
                         <label
-                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                        >
+                          class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
                           Số Đăng ký kinh doanh:
                           <input
                             type="text"
                             placeholder="Ví dụ: 01/01/1984"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Supporting text</span>
                       </div>
                       <div class="col-span-3 text-red-500 max-lg:col-span-6">
                         <label
-                          class="border-red inline-block w-full rounded-lg border px-3 pt-1.5 pb-3.5"
-                        >
+                          class="border-red inline-block w-full rounded-lg border px-3 pt-1.5 pb-3.5">
                           Địa chỉ: <span class="text-red-500">*</span>
                           <input
                             type="text"
                             placeholder="abc@gmail.com"
-                            class="w-full outline-none"
-                          />
+                            class="w-full outline-none" />
                         </label>
                         <span class="ml-4 w-fit">Email sai định dạng</span>
                       </div>
@@ -1208,19 +1194,19 @@
                   <h2 class="text-2xl font-bold">Yêu cầu khác</h2>
                   <p class="text-sm">Bổ sung các thông tin cần hỗ trợ</p>
                 </div>
-                <div class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+                <div
+                  class="gap-6 rounded-xl px-5 pt-4 pb-12 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <div class="w-full">
                     <label
-                      class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5"
-                    >
-                      Quý khách cần hỗ trợ thêm các dịch vụ hoặc điều kiện sức khỏe:
+                      class="inline-block w-full rounded-lg border border-[#B3B0D8] px-3 pt-1.5 pb-3.5">
+                      Quý khách cần hỗ trợ thêm các dịch vụ hoặc điều kiện sức
+                      khỏe:
 
                       <textarea
                         class="w-full outline-none"
                         name
                         id
-                        placeholder="Ví dụ: Bay lần đầu, đặt suất ăn, ghế ngồi, Số thẻ thành viên, Passport...Yêu cầu hỗ trợ xe lăn"
-                      ></textarea>
+                        placeholder="Ví dụ: Bay lần đầu, đặt suất ăn, ghế ngồi, Số thẻ thành viên, Passport...Yêu cầu hỗ trợ xe lăn"></textarea>
                     </label>
                     <span class="ml-4 w-fit"></span>
                   </div>
@@ -1232,10 +1218,10 @@
 
           <!-- CHI TIÊT -->
           <div
-            class="box-sha col-span-1 rounded-xl shadow-[0_0_18px_rgba(0,0,0,0.15)] filter max-lg:col-span-3"
-          >
+            class="box-sha col-span-1 rounded-xl shadow-[0_0_18px_rgba(0,0,0,0.15)] filter max-lg:col-span-3">
             <!-- // -->
-            <div class="head mb-2 flex items-center justify-between px-3.5 py-2">
+            <div
+              class="head mb-2 flex items-center justify-between px-3.5 py-2">
               <p class="text-base font-bold">CHI TIẾT GIÁ</p>
               <div>
                 <svg
@@ -1243,29 +1229,27 @@
                   height="9"
                   viewBox="0 0 16 9"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M14.75 0.75L7.75 7.75L0.75 0.75"
                     stroke="#020035"
                     stroke-width="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                    stroke-linejoin="round" />
                 </svg>
               </div>
             </div>
             <!-- // -->
             <!-- // -->
             <div
-              class="head bg-primary flex items-center justify-between rounded-t-xl p-3.5 text-white"
-            >
+              class="head bg-primary flex items-center justify-between rounded-t-xl p-3.5 text-white">
               <p class="text-base font-bold">Chuyến đi</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé người lớn</p>
               <p class="text-base font-bold">1,220,400 VND</p>
             </div>
@@ -1283,7 +1267,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé trẻ em</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1301,7 +1286,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé em bé</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1319,7 +1305,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Dịch vụ bổ trợ</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1346,13 +1333,15 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-primary flex items-center justify-between p-3.5 text-white">
+            <div
+              class="head bg-primary flex items-center justify-between p-3.5 text-white">
               <p class="text-base font-bold">Chuyến về</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé người lớn</p>
               <p class="text-base font-bold">1,220,400 VND</p>
             </div>
@@ -1370,7 +1359,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé trẻ em</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1388,7 +1378,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Giá vé em bé</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1406,7 +1397,8 @@
             </div>
             <!-- // -->
             <!-- // -->
-            <div class="head bg-bg-info flex items-center justify-between p-3.5">
+            <div
+              class="head bg-bg-info flex items-center justify-between p-3.5">
               <p class="text-base font-bold">Dịch vụ bổ trợ</p>
               <p class="text-base font-bold">1,803,800 VND</p>
             </div>
@@ -1435,19 +1427,21 @@
             <!-- // -->
             <div class="bg-bg-info p-3.5">
               <label
-                class="flex inline-block cursor-pointer flex-col items-center rounded-xl border border-[#B3B0D8] bg-white px-7 py-3 font-bold"
-              >
+                class="flex inline-block cursor-pointer flex-col items-center rounded-xl border border-[#B3B0D8] bg-white px-7 py-3 font-bold">
                 <p>Mã Khuyến mại:</p>
-                <input type="text" class="uppercase outline-none" placeholder="Ví dụ: VMBSALE100" />
+                <input type="text" class="uppercase outline-none"
+                  placeholder="Ví dụ: VMBSALE100" />
               </label>
             </div>
             <!-- // -->
             <!-- // -->
             <div class="bg-primary p-3.5 text-white">
-              <label class="flex cursor-pointer items-start justify-between text-sm">
+              <label
+                class="flex cursor-pointer items-start justify-between text-sm">
                 <input type="checkbox" class="mt-1.5 mr-2" />
                 <p>
-                  Tôi đã đọc, hiểu và đồng ý với các điều khoản của hãng hàng không, các thông tin
+                  Tôi đã đọc, hiểu và đồng ý với các điều khoản của hãng hàng
+                  không, các thông tin
                   đặt vé đã chính xác và tôi không có thắc mắc gì.
                 </p>
               </label>
@@ -1455,11 +1449,11 @@
             <!-- // -->
             <div class="p-3.5">
               <p class="text-xl">Tổng tiền:</p>
-              <div class="mt-3 flex flex-col items-center justify-between gap-3">
+              <div
+                class="mt-3 flex flex-col items-center justify-between gap-3">
                 <p class="text-accent text-2xl font-extrabold">3,607,600 VND</p>
                 <button
-                  class="bg-accent rounded-tl-3xl rounded-br-3xl px-8 py-3 text-xl font-bold text-white"
-                >
+                  class="bg-accent rounded-tl-3xl rounded-br-3xl px-8 py-3 text-xl font-bold text-white">
                   Thanh toán
                 </button>
               </div>
